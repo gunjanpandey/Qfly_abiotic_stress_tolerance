@@ -1,0 +1,320 @@
+---
+title: "Variation in stress tolerance in Queensland fruit fly"
+subtitle: "Statitics analysis desiccation and starvation tolerance"
+author: Popa-Baez A. D., Lee S. F., Yeap H. L., Prasad S. S., Schiffer M., Mourant
+  R., Castro-Vargas C., Edwards O. R., Taylor P. W. and Oakeshott J. G.
+date: "20 April 2019"
+output: html_document
+---
+
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+knitr::opts_chunk$set(echo=FALSE, 
+               warning=FALSE, message=FALSE)
+
+source("./R/desiccation_and_starvation_data_import_and_cleaning.R")
+```
+
+
+#### **Wild:**
+
+**Is there population differences in wild populations?**
+
+*_Desiccation_*
+```{r Population differences in wild desiccation tolerance in Males, echo=FALSE}
+
+
+xtable(anova(glm(rtime ~ pop, family = Gamma(link = "log"), data = desiccant.wild.s[[2]]), test = "Chisq")) %>% 
+  knitr::kable(digits = 10 , caption = "Analysis of deviance table difference describings significant impact of populations on desiccation tolerance in wild Qfly")
+
+
+```
+
+
+```{r Pairwise comparison wild desiccation tolerance in Males}
+
+glm.des.wild <- glm(rtime ~ pop, family = Gamma(link = "log"), data = desiccant.wild.s[[2]])
+glm.des.wild.emm <- emmeans(glm.des.wild, "pop", type = "response")
+
+CLD(glm.des.wild.emm) %>% knitr::kable(digits = 3, caption = "Tukey adjusted pairwise comparison of desiccation tolerance estimated means for wild Qfly populations. Estimates are obtained obtained after back-transforming the predicted values from the log scale used in the Gamma-GLM model.")
+
+```
+
+
+*_Starvation_*
+```{r Population differences in wild starvation tolerance in Males, echo=FALSE}
+
+xtable(anova(glm(rtime ~ pop, family = Gamma(link = "log"), data = starvation.wild.s[[2]]), test = "Chisq")) %>% 
+  knitr::kable(digits = 20 , caption = "Analysis of deviance table difference describings significant impact of populations on starvation tolerance in wild Qfly")
+
+```
+
+
+**Is it latitudinal and is there an cosatal and inland effect?**
+
+*_Desiccation_*
+```{r desiccation tolerance latitudinal cline in Qfly males, echo=FALSE}
+xtable(lm(pmedian ~ lat*origin, data = desiccant.wild.1.s[[2]]))  %>% 
+  knitr::kable(digits = 3 , caption = "Desiccation latitudinal cline in wild males Qfly")
+```
+
+*_Starvation_*
+```{r starvation tolerance latitudinal cline in Qfly males, echo=FALSE}
+xtable(lm(pmedian ~ lat*origin, data = starvation.wild.1.s[[2]]))  %>% 
+  knitr::kable(digits = 3 , caption = "Starvation latitudinal cline in wild females Qfly")
+
+```
+
+**Does weather variables explain the population differences?**
+
+```{r regression desiccation tolerance response vs weather variables, include=FALSE}
+
+desiccation.weather <- desiccant.wild %>%
+  dplyr::left_join(weather_variables, by = "pop") %>% 
+  droplevels() %>% 
+  dplyr::select("pmedian",
+                "mean.max", "mean.min", 
+                "mean.rain", "mean.solar", 
+                "annual.temp", "max.high.temp", 
+                "low.high.temp", "low.min.temp", 
+                "high.min.temp", "min.dry.month") %>% 
+  distinct()
+
+
+step.lm.weather.desiccation<- step(lm(pmedian ~ mean.rain + 
+                                  mean.solar + 
+                                  max.high.temp + 
+                                  low.min.temp + 
+                                  min.dry.month, 
+                                data = desiccation.weather), direction = "both")
+
+xtable(summary(step.lm.weather.desiccation)) %>% knitr::kable()
+
+```
+
+```{r regression desiccation tolerance response vs weather variables output}
+xtable(summary(step.lm.weather.desiccation)) %>% knitr::kable()
+```
+
+
+
+```{r regression starvation tolerance response vs weather variables, include=FALSE}
+
+starvation.weather <- starvation.wild%>%
+  dplyr::left_join(weather_variables, by = "pop") %>% 
+  droplevels() %>% 
+  dplyr::select("pmedian",
+                "mean.max", "mean.min", 
+                "mean.rain", "mean.solar", 
+                "annual.temp", "max.high.temp", 
+                "low.high.temp", "low.min.temp", 
+                "high.min.temp", "min.dry.month") %>% 
+  distinct()
+
+
+step.lm.weather.starvation <- step(lm(pmedian ~ mean.rain + 
+                                  mean.solar + 
+                                  max.high.temp + 
+                                  low.min.temp + 
+                                  min.dry.month, 
+                                data = starvation.weather), direction = "both")
+```
+
+```{r regression starvation tolerance response vs weather variables output}
+xtable(summary(lm(pmedian ~ mean.rain + 
+                                  mean.solar + 
+                                  max.high.temp + 
+                                  low.min.temp + 
+                                  min.dry.month, 
+                                data = starvation.weather))) %>% knitr::kable()
+```
+
+
+#### **Domesticated:**
+
+**Is there population a significant change in desiccation tolerance and does it differ by populations? and Which are their groupings?**
+
+*_Desiccation_*
+
+```{r Gamma-GLM desiccation}
+options(digits = 3, scipen = -2)
+
+
+glm.desiccation <- glm(rtime ~ pop + gens + pop*gens, family = Gamma(link = "log"), data = desiccant.glm)
+
+xtable(anova(glm.desiccation, test = "Chisq")) %>% 
+  knitr::kable(digits = c(2,2,2,3,30), caption = "Analysis of deviance table difference describings significant impact of the treatment generation and its interaction on desiccation tolerance during domestication of Qfly males")
+
+```
+
+
+
+```{r pairwise means comparisons desiccation tolerance}
+
+pairwise.glm.desiccation <- emtrends(glm.desiccation, pairwise  ~ pop, var = "gens", transform = "response")
+CLD(pairwise.glm.desiccation$emtrends) %>% knitr::kable(digits = 2, caption = "Tukey adjusted pairwise comparison of desiccation slopes estimates for all domesticated Qfly populations. Trends are obtained after back-transforming from the log scale used in the Gamma-GLM model.")
+
+```
+
+
+*_Starvation_*
+
+```{r Gamma-GLM starvation}
+options(digits = 3, scipen = -2)
+glm.starvation <- glm(rtime ~ pop + gens + pop*gens, family = Gamma(link = "log"), data = starvation.glm)
+
+xtable(anova(glm.starvation, test = "Chisq")) %>% 
+  knitr::kable(digits = c(1,2,2,2,10), 
+               caption = "Analysis of deviance table difference describings significant impact of the treatment generation and its interaction on starvation tolerance during domestication of Qfly males")
+
+```
+
+
+```{r pairwise means comparisons Starvation tolerance}
+pairwise.glm.starvation<- emtrends(glm.starvation, pairwise  ~ pop, var = "gens", transform = "response")
+
+CLD(pairwise.glm.starvation$emtrends) %>% knitr::kable(digits = 3, caption = "Tukey adjusted pairwise comparison of starvation slopes estimates for all domesticated Qfly populations. Trends are obtained after back-transforming from the log scale used in the Gamma-GLM model.")
+
+```
+
+
+#### **Domesticated (Wild vs Domesticated):**
+
+```{r data for desiccation and starvation wild vs Domesticated, include=FALSE}
+
+desiccant.wild.v.domes <- desiccation.1 %>% 
+  ungroup() %>%
+  dplyr::filter(!gen %in% c("G2_9", "G3_9")) %>%
+  dplyr::filter(trt == "Desiccant") %>%
+  dplyr::filter(sex == "Male") %>%
+  dplyr::mutate(pop = as.factor(pop)) %>% 
+  dplyr::mutate(gens = as.numeric(gsub("[^0-9]", "", gen))) %>% 
+  dplyr::mutate(status = case_when(gen == "G2" ~ "Wild", gen == "G10" ~ "Domesticated", gen == "G11" ~ "Domesticated", TRUE ~ as.character(gen))) %>% 
+  dplyr::mutate(trt = case_when(trt == "Desiccant" ~ "Desiccation")) %>%
+  dplyr::filter(status %in% c("Wild", "Domesticated")) %>%
+  dplyr::filter(!pop %in% c("Cape Tribulation", "Darwin", "Canberra", "Bega Valley", "S06")) %>%
+  dplyr::select("pop", "gens", "trt", "status", "rtime") %>% 
+  droplevels()
+
+desiccant.wild.v.domes$status <- factor(desiccant.wild.v.domes$status, levels = c("Domesticated", "Wild"))
+
+starvation.wild.v.domes <- desiccation.1 %>% 
+  ungroup() %>%
+  dplyr::filter(!gen %in% c("G2_9", "G3_9")) %>%
+  dplyr::filter(trt == "Control") %>%
+  dplyr::filter(sex == "Male") %>%
+  dplyr::mutate(pop = as.factor(pop)) %>% 
+  dplyr::mutate(gens = as.numeric(gsub("[^0-9]", "", gen))) %>% 
+  dplyr::mutate(status = case_when(gen == "G2" ~ "Wild", gen == "G10" ~ "Domesticated", gen == "G11" ~ "Domesticated", TRUE ~ as.character(gen))) %>% 
+  dplyr::mutate(trt = case_when(trt == "Desiccant" ~ "Desiccation")) %>%
+  dplyr::filter(status %in% c("Wild", "Domesticated")) %>%
+  dplyr::filter(!pop %in% c("Cape Tribulation", "Darwin", "Canberra", "Bega Valley", "S06")) %>%
+  dplyr::select("pop", "gens", "trt", "status", "rtime") %>% 
+  droplevels()
+
+starvation.wild.v.domes$status <- factor(starvation.wild.v.domes$status, levels = c("Domesticated", "Wild"))
+
+```
+
+
+*_Desiccation_*
+
+```{r population differences in domesticated males desiccation tolerance}
+desiccant.wild.v.domes.diff <- desiccant.wild.v.domes %>% filter(status == "Domesticated") %>% droplevels()
+
+xtable(anova(glm(rtime ~ pop , family = Gamma(link = "log"), data = desiccant.wild.v.domes), test = "Chisq")) %>% 
+  `rownames<-`(c("Null model", "Population")) %>%
+         knitr::kable(digits = 20 ,caption = "Analysis of deviance difference describings significant impact of populations on desiccation tolerance change after domestication")
+
+```
+
+```{r population differences wild vs domesticated in males desiccation tolerance}
+
+xtable(anova(glm(rtime ~ pop + status + pop*status, family = Gamma(link = "log"), data = desiccant.wild.v.domes), test = "Chisq")) %>% 
+  `rownames<-`(c("Null model", "Population", "Domestication status", "Population * Domestication Status")) %>%
+         knitr::kable(digits = 30 ,caption = "Analysis of deviance difference describings significant impact of populations, domesticated status and their interaction on desiccation tolerance change during domestication")
+
+```
+
+
+
+```{r Pairwise comparison desiccation tolerance change during domestication by population}
+
+desiccation.glm.wild.v.dom <- glm(rtime ~ pop + status + pop*status, family = Gamma(link = "log"), data = desiccant.wild.v.domes)
+
+desiccation.pairwise.glm.wild.v.dom <- emmeans(desiccation.glm.wild.v.dom, pairwise ~ status | pop, type = "response") 
+
+desiccation.pairwise.glm.wild.v.dom$contrasts %>% 
+  knitr::kable(digits = 3, 
+               caption = "Contrast for wild and domesticated status by populations are presented without back-transformation.")
+
+```
+
+*_Starvation_*
+
+```{r population differences in domesticated males starvation tolerance}
+starvation.wild.v.domes.diff <- starvation.wild.v.domes %>% filter(status == "Domesticated") %>% droplevels()
+
+xtable(anova(glm(rtime ~ pop , family = Gamma(link = "log"), data = starvation.wild.v.domes.diff), test = "Chisq")) %>% 
+  `rownames<-`(c("Null model", "Population")) %>%
+         knitr::kable(digits = 10 ,caption = "Analysis of deviance difference describings significant impact of populations on starvation tolerance change after domestication")
+
+```
+
+```{r population differences wild vs domesticated in males starvation tolerance}
+
+xtable(anova(glm(rtime ~ pop + status + pop*status, family = Gamma(link = "log"), data = starvation.wild.v.domes), test = "Chisq")) %>% 
+  `rownames<-`(c("Null model", "Population", "Domestication status", "Population * Domestication Status")) %>%
+         knitr::kable(digits = 30 ,caption = "Analysis of deviance difference describings significant impact of populations, domesticated status and their interaction on starvation tolerance change during domestication")
+
+```
+
+
+
+```{r Pairwise comparison starvation tolerance change during domestication by population}
+
+starvation.glm.wild.v.dom <- glm(rtime ~ pop + status + pop*status, family = Gamma(link = "log"), data = starvation.wild.v.domes)
+
+pairwise.starvation.glm.wild.v.dom <- emmeans(starvation.glm.wild.v.dom, pairwise ~ status | pop, type = "response") 
+#CLD(pairwise.starvation.glm.wild.v.dom$contrasts)
+pairwise.starvation.glm.wild.v.dom$contrasts %>% 
+  knitr::kable(digits = 3, 
+               caption = "Contrast for wild and domesticated status by populations are presented without back-transformation.")
+
+```
+
+#### **Percental change during domestication in desiccation and starvation tolernace**
+
+```{r change during domestication in desiccation, echo=FALSE, eval=FALSE}
+
+general.desiccation <- des.domes %>% 
+  filter(trt =="Desiccation") %>%
+  group_by(gen, trt) %>% 
+  dplyr::summarise(median = mean(pmedian)) %>% 
+  dplyr::select(median, gen) %>% 
+  tidyr::spread(gen, median) %>% 
+  rename("G10" = "G10+")
+
+
+ general.desiccation %>% transmute(change_G4_G2 =  round(((G4-G2)/G2)*100,1),
+                                    change_G6_G2 =  round(((G6-G2)/G2)*100,1), 
+                                    change_G8_G2 =  round(((G8-G2)/G2)*100,1),
+                                    change_G10_G2 = round(((G10 - G2)/G2)*100,1)) %>%
+   knitr::kable()
+
+ 
+ general.starvation <- des.domes %>% 
+  filter(trt =="Starvation") %>%
+  group_by(gen, trt) %>% 
+  dplyr::summarise(median = mean(pmedian)) %>% 
+  dplyr::select(median, gen) %>% 
+  tidyr::spread(gen, median) %>% 
+  rename("G10" = "G10+")
+
+
+ general.starvation %>% transmute(change_G4_G2 =  round(((G4-G2)/G2)*100,1),
+                                    change_G6_G2 =  round(((G6-G2)/G2)*100,1), 
+                                    change_G8_G2 =  round(((G8-G2)/G2)*100,1),
+                                    change_G10_G2 = round(((G10 - G2)/G2)*100,1)) %>%
+   knitr::kable()
+
+```

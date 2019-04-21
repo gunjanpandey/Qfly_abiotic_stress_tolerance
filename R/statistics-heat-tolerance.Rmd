@@ -1,0 +1,85 @@
+---
+title: "Variation in stress tolerance in Queensland fruit fly"
+subtitle: "Statitics analysis heat tolerance"
+author: Popa-Baez A. D., Lee S. F., Yeap H. L., Prasad S. S., Schiffer M., Mourant
+  R., Castro-Vargas C., Edwards O. R., Taylor P. W. and Oakeshott J. G.
+date: "20 April 2019"
+output: html_document
+---
+
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+knitr::opts_chunk$set(echo=FALSE, 
+               warning=FALSE, message=FALSE)
+
+source("./R/heat_data_clean_import.R")
+```
+
+
+**Do wild Qfly populations differ in the heat tolerance?**
+
+```{r Population differences wild heat tolerance in males}
+options(digits = 3, scipen = -2)
+
+xtable(anova(glm(rtime ~ pop, data = heat.wild.s[[2]], family = Gamma(link = "log")), test = "Chisq")) %>% 
+  knitr::kable(digits = 20, 
+               caption = "Analysis of deviance difference in heat tolerance wild Qfly males" )
+
+```
+
+**Is there latitudinal cline and/or a costal and inland effect?**
+
+```{r latitudinal cline males heat tolerance}
+xtable(lm(pmedian ~ lat*origin, data = heat.wild.1.s[[2]]))  %>% knitr::kable(digits = 3, caption = "Heat latitudinal cline in wild males Qfly" )
+
+```
+
+** Does weather variables explain the population differences?**
+
+```{r regression heat tolerance response vs weather variables, include=FALSE, cache=TRUE}
+step.lm.weather.heat <- step(lm(pmedian ~ mean.rain + 
+                                  mean.solar + 
+                                  max.high.temp + 
+                                  low.min.temp + 
+                                  min.dry.month, 
+                                data = heat.weather), direction = "both")
+```
+
+```{r regression heat tolerance response vs weather variables output}
+xtable(summary(step.lm.weather.heat)) %>% knitr::kable()
+
+```
+
+
+
+**Is there population differences in domesticated populations?**
+
+```{r population differences old heat Males}
+options(digits = 3, scipen = -2)
+
+xtable(anova(glm(rtime ~ pop, data = heat.old.s[[2]], family = Gamma(link = "log")), test = "Chisq")) %>% knitr::kable(digits = 20 ,caption = "Analysis of deviance table difference in heat tolerance in domesticated Qfly males")
+```
+
+
+```{r Analysis of deviance table comparison of heat tolerance in Qfly males for wild and domesticated populations, echo=F, message=F, warning=F}
+options(digits = 3, scipen = -2)
+heat.domes.3 <- heat.domes.3 %>% filter(!pop %in% c("Cape Tribulation", "Canberra", "Bega Valley")) %>% droplevels()
+
+xtable(anova(glm(rtime ~ pop + status + pop*status, data = heat.domes.3, family = Gamma(link = "log")), test = "Chisq")) %>% 
+  `rownames<-`(c("NULL", "Population", "Domestication Status", "Population * Domestication Status")) %>%
+  knitr::kable(digits = 5, 
+               caption = "Analysis of deviance table comparison of heat tolerance in Qfly males for wild and domesticated populations")
+
+```
+
+
+```{r Pairwise comparison heat tolerance change during domestication by population, }
+heat.domes.3$status <- factor(heat.domes.3$status, levels = c("Domesticated", "Wild"))
+glm.heat.domes <- glm(rtime ~ pop + status + pop*status, family = Gamma(link = "log"), data = heat.domes.3)
+
+pairwise.glm.heat <- emmeans(glm.heat.domes, pairwise ~ status | pop, type = "response") 
+
+pairwise.glm.heat$contrasts %>% 
+  knitr::kable(digits = 2, 
+               caption = "Contrast for wild and domesticated status by populations are presented with back-transformation.")
+
+```

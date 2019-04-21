@@ -1,0 +1,1378 @@
+---
+title: "Supplementary figures and tables" 
+subtitle: "Variation in stress tolerance in the Queensland fruit fly"
+author: Popa-Baez A. D., Lee S. F., Yeap H. L., Prasad S. S., Schiffer M., Mourant
+  R., Castro-Vargas C., Edwards O. R., Taylor P. W. and Oakeshott J. G.
+date: "20 April 2019"
+output:
+  pdf_document:
+        includes:
+          in_header: header_supplementary.tex
+  html_notebook: default
+---
+
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+knitr::opts_chunk$set(echo=FALSE,
+                      warning=FALSE, 
+                      message=FALSE,
+                      dpi = 300,
+                      fig.align="center",
+                      fig.show = 'asis')
+
+library("wesanderson")
+
+source("./R/weather_variables.R")
+source("./R/setup-environment.R")
+```
+
+
+```{r Heat Tolerance, include = FALSE , cache=TRUE}
+
+# ------ Heat Tolerance (Heat Knockdown Time) ------
+
+heat <-read_csv("data/Master_sheet_heat.csv", col_types = cols())
+
+heat <- heat %>% 
+  #filter(!comm %in% c("c", "temp")) %>% 
+  dplyr::select(num, exp, pop, sex, time, gen, round, lat, lon)
+
+heat <- na.omit(heat)
+heat <- heat  %>% mutate(origin = if_else(pop %in% c("Batemans Bay", "Bega Valley", "Brisbane", 
+                                                           "Cape Tribulation", "Sydney", "Utchee Creek", 
+                                                           "Darwin"), "Costal", "Inland"))
+
+
+# Normalize experiment runs with S06: 
+
+h.s06 <- heat %>% 
+  filter(pop == "S06") %>% 
+  mutate(mean = round(mean(time),2)) %>% 
+  group_by(exp, sex) %>% 
+  mutate(emedian = round(median(time),2)) %>% 
+  ungroup() %>% 
+  group_by(sex, exp, emedian) %>% 
+  summarise() %>%
+  group_by(sex) %>%
+  mutate(median = mean(emedian))
+
+h.s06.1 <- h.s06 %>% 
+  dplyr::group_by(sex, exp, emedian, median) %>% 
+  dplyr::summarise()
+
+heat <- heat %>% 
+  left_join(h.s06.1, by = c("exp","sex")) 
+
+heat <- heat %>% group_by(exp, sex) %>% 
+  mutate(rtime = round(time/(emedian/median),2)) %>% 
+  ungroup() %>%
+  group_by(.dots=c("pop", "sex", "gen")) %>% 
+  mutate(nmedian = round(median(time),2)) %>%
+  mutate(pmedian = round(median(rtime),2)) %>% 
+  droplevels() %>%
+  ungroup() %>%
+  mutate(exp = as.factor(exp)) %>%
+  mutate(pop = as.factor(pop)) %>%
+  mutate(sex = as.factor(sex)) %>%
+  mutate(gen = as.factor(gen)) %>%
+  mutate(status= ifelse(gen == "G2", "Wild", "Domesticated")) 
+
+heat <- heat %>% dplyr::mutate(trans.rtime = jtrans(rtime, test = "lillie.test", exclude_original = FALSE)$transformed)  # Johnson normality transformation
+#jtrans(heat$rtime, test = "lillie.test", exclude_original = FALSE)
+#  mutate(trans.rtime = sqrt(rtime))
+
+heat.domes.2 <- heat %>% 
+  ungroup() %>%
+  dplyr::filter(sex == "Male") %>%
+  dplyr::select("pop", "pmedian", "nmedian","status", "lat") %>%
+  dplyr::filter(!pop %in% c("S06")) %>%
+  distinct() %>% 
+  droplevels()
+
+heat.domes.3 <- heat %>% 
+  ungroup() %>%
+  #dplyr::filter(sex == "Male") %>%
+  dplyr::select("pop", "pmedian", "nmedian", "status", "lat", "rtime", "trans.rtime") %>%
+  filter(!pop %in% c("Cape Tribulation", "Canberra", "Bega Valley")) %>%
+  dplyr::filter(!pop %in% c("S06")) %>%
+  distinct() %>% 
+  droplevels()
+
+heat.domes.3$status <- factor(heat.domes.3$status, levels = c("Wild", "Domesticated"))
+
+# Subsetting by generation
+
+### Wild
+heat.wild <- heat %>% 
+  filter(!exp == 4) %>% 
+  dplyr::select("pop", "gen", "sex", "lat", "lon", "status", "origin",
+                "emedian", "median", "nmedian", "pmedian") %>%
+  droplevels() %>%
+  distinct()
+
+heat.wild.1 <- heat.wild %>% 
+  filter(!pop == "S06") %>%
+  droplevels() %>%
+  ungroup() %>%
+  dplyr::select("pop", "gen", "sex", "lat", "lon", "status", "origin",
+                "emedian", "median", "nmedian", "pmedian") %>% 
+  ungroup() %>% 
+  dplyr::group_by(.dots=c("pop", "sex", "gen")) %>% 
+  mutate(proportion = round(nmedian/emedian,2)) %>% 
+  droplevels()
+
+heat.wild.1.s <- heat.wild.1 %>%
+  ungroup() %>%
+  group_by(sex) %>%
+  group_split() # 1. Females; 2. Males
+
+
+heat.wild.s <- heat %>% 
+  filter(!exp == 4) %>% 
+  filter(!pop == "S06") %>%
+  droplevels() %>%
+  ungroup() %>%
+  dplyr::select("pop", "gen", "sex", "lat", "lon", "status", "origin",
+                "emedian", "median", "nmedian", "pmedian", "rtime", "trans.rtime") %>% 
+  ungroup() %>% 
+  dplyr::group_by(.dots=c("pop", "sex", "gen")) %>% 
+  mutate(proportion = round(nmedian/emedian,2)) %>% 
+  droplevels() %>%
+  ungroup() %>%
+  group_by(sex) %>%
+  group_split() # 1. Females; 2. Males
+
+heat.wild.s[[1]] <- heat.wild.s[[1]] %>% droplevels()
+heat.wild.s[[2]] <- heat.wild.s[[2]] %>% droplevels()
+
+
+### Domesticated
+
+heat.old <- heat %>% 
+  filter(exp == 4) %>% 
+  dplyr::select("pop", "gen", "sex", "lat", "lon", "status", "origin",
+                "emedian", "median", "nmedian", "pmedian") %>% 
+  distinct() %>% 
+  droplevels()
+
+heat.old.1 <-heat.old %>% 
+  filter(!pop == "S06") %>% 
+  droplevels() %>%
+  ungroup() %>%
+  dplyr::select("pop", "gen", "sex", "lat", "lon", "status", "origin",
+                "emedian", "median", "nmedian", "pmedian") %>% 
+  ungroup() %>% 
+  dplyr::group_by(.dots=c("pop", "sex", "gen")) %>% 
+  mutate(proportion = round(nmedian/emedian,2)) %>% 
+  droplevels()
+
+heat.old.1.s <- heat.old.1 %>%
+  ungroup() %>%
+  group_by(sex) %>%
+  group_split() # 1. Females ?; 2. Males?
+
+heat.old.s <- heat %>%
+  filter(exp == 4) %>% 
+  filter(!pop == "S06") %>%
+  droplevels() %>%
+  ungroup() %>%
+  dplyr::select("pop", "gen", "sex", "lat", "lon", "status", "origin",
+                "emedian", "median", "nmedian", "pmedian", "rtime", "trans.rtime") %>% 
+  ungroup %>% 
+  dplyr::group_by(.dots=c("pop", "sex", "gen")) %>% 
+  mutate(proportion = round(nmedian/emedian,2)) %>% 
+  droplevels() %>%
+  ungroup() %>%
+  group_by(sex) %>%
+  group_split() # 1. Females; 2. Males
+
+heat.old.s[[1]] <- heat.old.s[[1]] %>% droplevels()
+heat.old.s[[2]] <- heat.old.s[[2]] %>% droplevels()
+
+### Weather correlation new dataset cold tolerance: -----
+heat.weather <- heat.wild.1 %>%
+  dplyr::left_join(weather_variables, by = "pop") %>% 
+  droplevels() %>% 
+  dplyr::select("pmedian",
+                "mean.max", "mean.min", 
+                "mean.rain", "mean.solar", 
+                "annual.temp", "max.high.temp", 
+                "low.high.temp", "low.min.temp", 
+                "high.min.temp", "min.dry.month") %>% 
+  distinct()
+
+
+###----- Statistical analysis heat domesticated -----
+
+## Correlation old vs domesticated males
+
+corr.heat.domes.wild.males <- heat.wild.1.s[[2]] %>% 
+  dplyr::ungroup() %>%
+  dplyr::select("pop", "pmedian") %>%
+  dplyr::left_join(heat.old.1.s[[2]], by =c("pop")) %>%
+  dplyr::select("pmedian.x", "pmedian.y") %>%
+  dplyr::rename(Wild_Males = "pmedian.x") %>%
+  dplyr::rename(Domesticated_Males = "pmedian.y")
+
+corr.heat.wild.males.prop <- heat.wild.1.s[[2]] %>% 
+  dplyr::ungroup() %>%
+  dplyr::select("pop", "lat", "sex","pmedian", "proportion") %>%
+  dplyr::left_join(heat.old.1.s[[2]], by =c("pop", "lat", "sex")) %>%
+  dplyr::mutate(change = round(pmedian.y/pmedian.x,2)) %>%
+  dplyr::select("pop", "lat", "sex", "status", "proportion.x",
+         "proportion.y", "pmedian.x", "pmedian.y", "change") %>%
+  dplyr::rename(Wild = "pmedian.x") %>%
+  dplyr::rename(Domesticated = "pmedian.y") %>%
+  dplyr::rename(proportion.wild = "proportion.x") %>%
+  dplyr::rename(proportion.domes = "proportion.y")
+
+```
+
+```{r Cold Tolerance, include=FALSE, cache=TRUE}
+
+# ------ Cold Tolerance (Chill Coma Recovery) ------
+
+## data import
+
+cold <-read_csv("data/Cold_master_sheet_complete_review.csv", 
+                col_types = cols(), guess_max = 10000)
+cold <- na.omit(cold) %>%
+  dplyr::mutate(pop = as.factor(pop)) %>%
+  dplyr::mutate(gen = as.factor(gen)) %>%
+  dplyr::mutate(sex = as.factor(sex)) %>%
+  dplyr::mutate(exp = as.factor(exp)) %>%
+  dplyr::mutate(trt = as.factor(trt))
+
+cold <- cold %>% dplyr::mutate(origin = if_else(pop %in% 
+                                           c("Batemans Bay", "Bega Valley", 
+                                             "Brisbane", "Cape Tribulation", 
+                                             "Sydney", "Utchee Creek", "Darwin"), 
+                                         "Costal", "Inland"))
+
+# Normalize variation between experiments: 
+
+c.s06 <- cold %>% 
+  filter(pop == "S06")
+
+c.s06 <- c.s06 %>% 
+  dplyr::group_by(exp, sex) %>% 
+  dplyr::mutate(emedian = round(median(time),2)) %>% 
+  dplyr::ungroup() %>%
+  dplyr::group_by(sex, exp, emedian) %>% 
+  dplyr::summarise() %>%
+  dplyr::group_by(sex) %>%
+  dplyr::mutate(median = mean(emedian))
+
+cold <- cold %>% 
+  dplyr::left_join(c.s06, by = c("exp", "sex"))
+
+cold <- cold %>% 
+  dplyr::group_by(exp, sex) %>% 
+  dplyr::mutate(rtime = round(time/(emedian/median),2)) %>%
+  dplyr::ungroup() %>%
+  dplyr::group_by(.dots=c("pop", "sex", "gen")) %>% 
+  dplyr::mutate(nmedian = round(median(time),2)) %>% 
+  dplyr::mutate(pmedian = round(median(rtime),2))%>% 
+  droplevels()
+
+cold$status <- factor(cold$status, levels = c("Wild", "Domesticated"))
+
+j.transformation <- jtrans(cold$rtime, test = "ad.test") # Normality transformation
+
+cold <- cold %>% ungroup() %>% dplyr::mutate(j.trans.rtime = jtrans(rtime, test = "ad.test", exclude_original = FALSE)$transformed)  # Johnson normality transformation
+#jtrans(heat$rtime, test = "lillie.test", exclude_original = FALSE)
+
+cold.trt.p.2 <- cold %>% 
+  dplyr::ungroup() %>%
+  dplyr::filter(sex == "Male") %>%
+  dplyr::select("pop", "pmedian", "sex", "status", "lat") %>%
+  dplyr::filter(!pop %in% c("S06")) %>%
+  dplyr::distinct() %>% 
+  droplevels()
+
+cold.trt.s <- cold.trt.p.2 %>% # For the figures 
+  dplyr::ungroup() %>%
+  dplyr::group_by(status) %>%
+  dplyr::group_split()
+
+cold.trt.p.3 <- cold %>% 
+  dplyr::ungroup() %>%
+  dplyr::select("pop", "pmedian", "sex", "status", "lat", "rtime", "j.trans.rtime") %>%
+  dplyr::filter(!pop %in% c("S06")) %>%
+  dplyr::distinct() %>% 
+  droplevels()
+
+
+## Subsetting by generation
+
+### Wild
+cold.wild <- cold %>% # To subset
+  dplyr::filter(!exp == 5) %>% 
+  dplyr::select("pop", "gen", "sex", "lat", "lon", "status", "origin",
+                "emedian", "median", "nmedian", "pmedian") %>%
+  droplevels() %>%
+  distinct()
+
+cold.wild.1 <- cold.wild %>% # For teh weather variables
+  dplyr::filter(!pop == "S06") %>%
+  droplevels() %>%
+  dplyr::ungroup() %>%
+  dplyr::select("pop", "gen", "sex", "lat", "lon", "status", "origin",
+                "emedian", "median", "nmedian", "pmedian") %>% 
+  dplyr::ungroup() %>% 
+  dplyr::group_by(.dots=c("pop", "sex", "gen")) %>% 
+  dplyr::mutate(proportion = round(nmedian/emedian,2)) %>% 
+  droplevels()
+
+cold.wild.1.s <- cold.wild.1 %>% # For the Correlation with the wild 
+  dplyr::ungroup() %>%
+  dplyr::group_by(sex) %>%
+  dplyr::group_split() # 1. Females; 2. Males
+
+
+cold.wild.s <- cold %>%  # For the ANOVA
+  dplyr::filter(!exp == 5) %>% 
+  dplyr::filter(!pop == "S06") %>%
+  droplevels() %>%
+  dplyr::ungroup() %>%
+  dplyr::select("pop", "gen", "sex", "lat", "lon", "status", "origin",
+                "emedian", "median", "nmedian", "pmedian", "rtime", "j.trans.rtime") %>% 
+  dplyr::ungroup() %>% 
+  dplyr::group_by(.dots=c("pop", "sex", "gen")) %>% 
+  dplyr::mutate(proportion = round(nmedian/emedian,2)) %>% 
+  droplevels() %>%
+  dplyr::ungroup() %>%
+  dplyr::group_by(sex) %>%
+  dplyr::group_split() # 1. Females; 2. Males
+
+cold.wild.s[[1]] <- cold.wild.s[[1]] %>% droplevels()
+cold.wild.s[[2]] <- cold.wild.s[[2]] %>% droplevels()
+
+
+### Domesticated
+
+cold.old <- cold %>% 
+  dplyr::filter(exp == 5) %>% 
+  dplyr::select("pop", "gen", "sex", "lat", "lon", "status", "origin", 
+                "emedian", "median", "nmedian", "pmedian") %>% 
+  dplyr::distinct() %>% 
+  droplevels()
+
+cold.old.1 <-cold.old %>% 
+  dplyr::filter(!pop == "S06") %>% 
+  droplevels() %>%
+  dplyr::ungroup() %>%
+  dplyr::select("pop", "gen", "sex", "lat", "lon", "status", "origin",
+                "emedian", "median", "nmedian", "pmedian") %>% 
+  dplyr::ungroup() %>% 
+  dplyr::group_by(.dots=c("pop", "sex", "gen")) %>% 
+  dplyr::mutate(proportion = round(nmedian/emedian,2)) %>% 
+  droplevels()
+
+cold.old.1.s <- cold.old.1 %>%
+  dplyr::ungroup() %>%
+  dplyr::group_by(sex) %>%
+  dplyr::group_split() # 1. Females ?; 2. Males?
+
+cold.old.s <- cold %>%
+  dplyr::filter(exp == 5) %>% 
+  dplyr::filter(!pop == "S06") %>%
+  droplevels() %>%
+  dplyr::ungroup() %>%
+  dplyr::select("pop", "gen", "sex", "lat", "lon", "status", "origin",
+                "emedian", "median", "nmedian", "pmedian", "rtime", "j.trans.rtime") %>% 
+  dplyr::ungroup() %>% 
+  dplyr::group_by(.dots=c("pop", "sex", "gen")) %>% 
+  dplyr::mutate(proportion = round(nmedian/emedian,2)) %>% 
+  droplevels() %>%
+  dplyr::ungroup() %>%
+  dplyr::group_by(sex) %>%
+  dplyr::group_split() # 1. Females; 2. Males
+
+cold.old.s[[1]] <- cold.old.s[[1]] %>% droplevels()
+cold.old.s[[2]] <- cold.old.s[[2]] %>% droplevels()
+
+#### Data for ANCOVA: 
+cold.ancova <- cold %>% 
+  dplyr::filter(!pop == "S06") %>%
+  dplyr::select("pop", "gen", "sex", "lat", "status", "pmedian") %>%
+  droplevels() %>%
+  dplyr::distinct() %>%
+  dplyr::group_by(sex) %>%
+  dplyr::group_split()
+
+
+### ---- Statistical analysis cold wild----
+
+## Correlation wild vs domesticated males
+
+corr.cold.domes.wild.males <- cold.wild.1.s[[2]] %>% 
+  dplyr::select("pop", "pmedian") %>%
+  dplyr::left_join(cold.old.1.s[[2]], by =c("pop")) %>%
+  dplyr::select("pmedian.x", "pmedian.y") %>%
+  dplyr::rename(Wild_Males = "pmedian.x") %>%
+  dplyr::rename(Domesticated_Males = "pmedian.y")
+
+corr.cold.domes.wild.males.prop <- cold.wild.1.s[[2]] %>% 
+  dplyr::select("pop", "lat", "sex","pmedian", "proportion") %>%
+  dplyr::left_join(cold.old.1.s[[2]], by =c("pop", "lat", "sex")) %>%
+  dplyr::mutate(change = round(pmedian.y/pmedian.x,2)) %>%
+  dplyr::select("pop", "lat", "sex", "status", "proportion.x", 
+         "proportion.y", "pmedian.x", "pmedian.y", "change") %>%
+  dplyr::rename(Wild = "pmedian.x") %>%
+  dplyr::rename(Domesticated = "pmedian.y") %>%
+  dplyr::rename(proportion.wild = "proportion.x") %>%
+  dplyr::rename(proportion.domes = "proportion.y")
+
+```
+
+```{r Desiccation tolerance, include=FALSE, cache=TRUE}
+
+# ------ Desiccation and Starvation Tolerance -----
+desiccation.all <- read_csv("data/Master_Sheet_Desiccation_all_repeat.csv", na = "NA", col_types = cols(), guess_max = 10000)
+latlong <-  read_csv("data/Lat-and-long-pops.csv", col_types = cols()) %>% 
+  mutate(pop = as.factor(pop))
+
+desiccation <- desiccation.all %>% 
+  filter(time > 0) %>% 
+  na.omit() %>%
+  mutate(pops = as.factor(pops)) %>% 
+  mutate(trt = as.factor(trt)) %>% 
+  mutate(gen = as.factor(gen)) %>%
+  mutate(pop = as.factor(pop))
+
+## Normalize by S06: 
+
+des.s06 <- desiccation %>% 
+  filter(pops == "S06") %>%
+  mutate(tmedian = round(median(time), 2)) %>% 
+  group_by(.dots=c("exp", "sex", "trt")) %>% 
+  mutate(emedian = round(median(time),2)) %>%
+  mutate(nemedian = ifelse(exp == 8, tmedian, round(emedian, 2))) %>% 
+  ungroup() %>% 
+  group_by(exp, sex, trt, nemedian) %>%
+  summarise() %>%
+  group_by(sex, trt) %>%
+  mutate(median = mean(nemedian))
+
+
+desiccation.1 <- desiccation %>% 
+  left_join(des.s06, by = c("exp", "trt", "sex")) %>% 
+  dplyr::select(-c("pop", "com", "num"))  %>% 
+  droplevels() %>% 
+  dplyr::rename(pop = "pops") %>%
+  mutate(pop = as.factor(pop)) %>% 
+  ungroup() %>% 
+  dplyr::group_by(gen, exp, rep, trt) %>% 
+  mutate(rtime = round(time/(nemedian/median), 2)) %>% 
+  droplevels() %>% 
+  ungroup() %>% 
+  dplyr::left_join(latlong, by = "pop") %>%
+  group_by(.dots = c("exp", "pop", "sex", "trt", "gen", "rep")) %>% 
+  mutate(nmedian = round(median(time), 2)) %>%
+  mutate(pmedian = round(median(rtime), 2)) %>%
+  ungroup() %>%
+  group_by(.dots = c("exp", "pop", "sex", "trt", "gen")) %>% 
+  mutate(mean.pmedian = round(median(rtime), 2))
+
+des.domes.repeat <- desiccation.1 %>%
+  ungroup() %>%
+  dplyr::select("pop", "sex", "rep","gen", "lat", "trt", "nmedian", "nemedian", "pmedian", "mean.pmedian") %>%
+  dplyr::filter(!pop %in% c("S06")) %>%
+  dplyr::mutate(gen = case_when(gen == "G10" ~ "G10+", gen == "G11" ~ "G10+", TRUE ~ as.character(gen))) %>% 
+  dplyr::mutate(trt = case_when(trt == "Control" ~ "Starvation", trt == "Desiccant" ~ "Desiccation")) %>%
+  distinct() %>% 
+  droplevels()
+
+des.domes <- desiccation.1 %>%
+  filter(!gen %in% c("G2_9", "G3_9")) %>%
+  filter(sex == "Male") %>%
+  ungroup() %>%
+  dplyr::select("pop", "sex", "rep","gen", "lat", "trt", "pmedian", "mean.pmedian") %>%
+  dplyr::filter(!pop %in% c("S06", "Canberra", "Cape Tribulation", "Darwin", "Bega Valley")) %>%
+  dplyr::mutate(gen = case_when(gen == "G10" ~ "G10+", gen == "G11" ~ "G10+", TRUE ~ as.character(gen))) %>% 
+  dplyr::mutate(trt = case_when(trt == "Control" ~ "Starvation", trt == "Desiccant" ~ "Desiccation")) %>%
+  distinct() %>% 
+  droplevels()
+
+des.domes$gen <- factor(des.domes$gen, levels = c("G2", "G4", "G6", "G8", "G10+"))
+
+
+desiccant <- desiccation.1 %>% 
+  filter(!gen %in% c("G2_9", "G3_9")) %>%
+  dplyr::filter(trt == "Desiccant") %>%
+  droplevels() 
+
+starvation <- desiccation.1 %>% 
+  filter(!gen %in% c("G2_9", "G3_9")) %>%
+  dplyr::filter(trt == "Control") %>%
+  droplevels()
+
+
+desiccant.glm <- desiccation.1 %>% 
+  ungroup() %>%
+  dplyr::filter(!gen %in% c("G2_9", "G3_9")) %>%
+  dplyr::filter(trt == "Desiccant") %>%
+  dplyr::filter(sex == "Male") %>%
+  dplyr::mutate(gens = as.numeric(gsub("[^0-9]", "", gen))) %>% 
+  dplyr::mutate(pop = as.factor(pop)) %>% 
+  dplyr::mutate(sex = as.factor(sex)) %>% 
+  dplyr::mutate(trt = as.factor(trt)) %>% 
+  dplyr::filter(!pop %in% c("Cape Tribulation", "Darwin", "Canberra", "Bega Valley", "S06")) %>%
+  dplyr::select("pmedian", "pop", "gens", "rtime") %>% 
+  dplyr::distinct() %>%
+  droplevels()
+
+starvation.glm <- desiccation.1 %>% 
+  ungroup() %>%
+  dplyr::filter(!gen %in% c("G2_9", "G3_9")) %>%
+  dplyr::filter(trt == "Control") %>%
+  dplyr::filter(sex == "Male") %>%
+  dplyr::mutate(gens = as.numeric(gsub("[^0-9]", "", gen))) %>% 
+  dplyr::mutate(pop = as.factor(pop)) %>% 
+  dplyr::mutate(sex = as.factor(sex)) %>% 
+  dplyr::mutate(trt = as.factor(trt)) %>% 
+  dplyr::filter(!pop %in% c("Cape Tribulation", "Darwin", "Canberra", "Bega Valley", "S06")) %>%
+  dplyr::select("pmedian", "pop", "gens", "rtime") %>% 
+  dplyr::distinct() %>%
+  droplevels()
+
+
+## ----- Wild ------
+## Subsetting by generation
+
+### Desiccation wild
+desiccant.wild <- desiccant %>%
+  filter(gen == "G2") %>%
+  ungroup() %>%
+  dplyr::select("pop", "gen", "sex", "lat", "trt", 
+                "nemedian", "median", "nmedian", "pmedian") %>%
+  ungroup() %>%
+  mutate(status = "Wild") %>%
+  dplyr::group_by(.dots=c("pop", "sex", "gen")) %>%
+  mutate(proportion = round(nmedian/nemedian, 2)) %>%
+  mutate(origin = if_else(pop %in% c("Batemans Bay", "Bega Valley", "Brisbane",
+                                     "Cape Tribulation", "Sydney", "Utchee Creek",
+                                     "Darwin"), 
+                          "Costal", "Inland")) %>%
+  droplevels()
+
+desiccant.wild.1.s <- desiccant.wild %>%
+  ungroup() %>%
+  distinct() %>%
+  group_by(sex) %>%
+  group_split() # 1 Females; 2. Males
+
+desiccant.wild.s <- desiccant %>%
+  filter(gen == "G2") %>%
+  ungroup() %>%
+  dplyr::select("pop", "gen", "sex", "lat", "nemedian", "trt",
+                "median", "nmedian", "pmedian", "rtime") %>%
+  ungroup() %>%
+  dplyr::group_by(.dots=c("pop", "sex", "gen")) %>%
+  mutate(proportion = round(nmedian/nemedian, 2)) %>%
+  mutate(status = "Wild") %>%
+  droplevels() %>%
+  ungroup() %>%
+  group_by(sex) %>%
+  group_split() # 1 Females; 2. Males
+  
+desiccant.wild.s[[1]] <- desiccant.wild.s[[1]] %>% droplevels()
+desiccant.wild.s[[2]] <- desiccant.wild.s[[2]] %>% droplevels()
+
+### Starvation wild
+starvation.wild <- starvation %>%
+  filter(gen == "G2") %>%
+  ungroup() %>%
+  dplyr::select("pop", "gen", "sex", "lat", "trt",
+                "nemedian", "median", "nmedian", "pmedian") %>%
+  ungroup() %>%
+  mutate(status = "Wild") %>%
+  dplyr::group_by(.dots=c("pop", "sex", "gen")) %>%
+  mutate(proportion = round(nmedian/nemedian, 2)) %>%
+  mutate(origin = if_else(pop %in% c("Batemans Bay", "Bega Valley", "Brisbane",
+                                     "Cape Tribulation", "Sydney", "Utchee Creek",
+                                     "Darwin"), 
+                          "Costal", "Inland")) %>%
+  droplevels()
+
+starvation.wild.1.s <- starvation.wild %>%
+  ungroup() %>%
+  distinct() %>%
+  group_by(sex) %>%
+  group_split() # 1 Females; 2. Males
+
+starvation.wild.s <- starvation %>%
+  filter(gen == "G2") %>%
+  ungroup() %>%
+  dplyr::select("pop", "gen", "sex", "lat", "nemedian", "trt",
+                "median", "nmedian", "pmedian", "rtime") %>%
+  ungroup() %>%
+  dplyr::group_by(.dots=c("pop", "sex", "gen")) %>%
+  mutate(proportion = round(nmedian/nemedian, 2)) %>%
+  mutate(status = "Wild") %>%
+  droplevels() %>%
+  ungroup() %>%
+  group_by(sex) %>%
+  group_split() # 1 Females; 2. Males
+  
+starvation.wild.s[[1]] <- starvation.wild.s[[1]] %>% droplevels()
+starvation.wild.s[[2]] <- starvation.wild.s[[2]] %>% droplevels()
+
+## Wild vs Domesticated data: 
+
+des.wild.repeat <- des.domes.repeat %>%
+  filter(gen %in% c("G2","G2_9", "G3_9", "G10+")) %>%
+  dplyr::mutate(status = case_when(gen == "G2" ~ "Wild", gen == "G10+" ~ "Domesticated",
+                                    gen == "G2_9" ~ "Wild", gen == "G3_9" ~ "Wild",
+                                    TRUE ~ as.character(gen))) %>%
+   dplyr::mutate(status.1 = case_when(gen == "G2" ~ "Wild", gen == "G10+" ~ "Domesticated",
+                                    gen == "G2_9" ~ "Wild_repeated", gen == "G3_9" ~ "Wild_repeated",
+                                    TRUE ~ as.character(gen))) %>% 
+  ungroup() %>%
+  dplyr::select("pop", "gen", "sex", "trt","lat", "status", "status.1","pmedian", "nmedian", "nemedian") %>%
+  ungroup() %>%
+  dplyr::group_by(.dots=c("pop", "sex", "gen")) %>%
+  mutate(proportion = round(nmedian/nemedian, 2)) %>%
+  droplevels()
+
+des.wild.repeat$status <- factor(des.wild.repeat$status, levels = c("Wild", "Domesticated"))
+
+des.wild.repeat.2 <- des.wild.repeat %>%
+  filter(status.1 %in% c("Wild", "Domesticated")) %>% 
+  filter(sex == "Male") %>%
+  droplevels()
+
+## ----- Domesticated ------
+
+### Desiccation domesticated
+desiccant.domes <- desiccant %>%
+  filter(gen %in% c("G10", "G11")) %>%
+  ungroup() %>%
+  dplyr::select("pop", "gen", "sex", "lat", "trt", 
+                "nemedian", "median", "nmedian", "pmedian") %>%
+  ungroup() %>%
+  mutate(status = "Domesticated") %>%
+  dplyr::group_by(.dots=c("pop", "sex", "gen")) %>%
+  mutate(proportion = round(nmedian/nemedian, 2)) %>%
+  droplevels()
+
+desiccant.domes.1.s <- desiccant.domes %>%
+  ungroup() %>%
+  distinct() %>%
+  group_by(sex) %>%
+  group_split() # 1 Females; 2. Males
+
+desiccant.domes.s <- desiccant %>%
+  filter(gen %in% c("G10", "G11")) %>%
+  ungroup() %>%
+  dplyr::select("pop", "gen", "sex", "lat", "nemedian", "trt",
+                "median", "nmedian", "pmedian", "rtime") %>%
+  ungroup() %>%
+  mutate(status = "Domesticated") %>%
+  dplyr::group_by(.dots=c("pop", "sex", "gen")) %>%
+  mutate(proportion = round(nmedian/nemedian, 2)) %>%
+  droplevels() %>%
+  ungroup() %>%
+  group_by(sex) %>%
+  group_split() # 1 Females; 2. Males
+  
+desiccant.domes.s[[1]] <- desiccant.domes.s[[1]] %>% droplevels()
+desiccant.domes.s[[2]] <- desiccant.domes.s[[2]] %>% droplevels()
+
+### Starvation domesticated
+starvation.domes <- starvation %>%
+  filter(gen %in% c("G10", "G11")) %>%
+  ungroup() %>%
+  dplyr::select("pop", "gen", "sex", "lat", "trt",
+                "nemedian", "median", "nmedian", "pmedian") %>%
+  ungroup() %>%
+  mutate(status = "Domesticated") %>%
+  dplyr::group_by(.dots=c("pop", "sex", "gen")) %>%
+  mutate(proportion = round(nmedian/nemedian, 2)) %>%
+  droplevels()
+
+starvation.domes.1.s <- starvation.domes %>%
+  ungroup() %>%
+  distinct() %>%
+  group_by(sex) %>%
+  group_split() # 1 Females; 2. Males
+
+starvation.domes.s <- starvation %>%
+  filter(gen %in% c("G10", "G11")) %>%
+  ungroup() %>%
+  dplyr::select("pop", "gen", "sex", "lat", "nemedian", "trt",
+                "median", "nmedian", "pmedian", "rtime") %>%
+  ungroup() %>%
+  mutate(status = "Domesticated") %>%
+  dplyr::group_by(.dots=c("pop", "sex", "gen")) %>%
+  mutate(proportion = round(nmedian/nemedian, 2)) %>%
+  droplevels() %>%
+  ungroup() %>%
+  group_by(sex) %>%
+  group_split() # 1 Females; 2. Males
+  
+starvation.domes.s[[1]] <- starvation.domes.s[[1]] %>% droplevels()
+starvation.domes.s[[2]] <- starvation.domes.s[[2]] %>% droplevels()
+
+####---- Correlations wild -----
+### Correlation sexes in wild desiccant: 
+
+corr.wild.desiccant.sex <- desiccant.wild.1.s[[1]] %>%
+  select("pop", "lat", "gen", "trt","pmedian") %>%
+  left_join(desiccant.wild.1.s[[2]], by = c("pop", "lat", "gen")) %>%
+  select("pmedian.x", "pmedian.y") %>% 
+  dplyr::rename(Female_desiccant = "pmedian.x") %>%
+  dplyr::rename(Male_desiccant = "pmedian.y")
+
+### Correlation sexes in wild starvation:
+
+corr.wild.starvation.sex <- starvation.wild.1.s[[1]] %>%
+  select("pop", "lat", "gen", "trt", "pmedian") %>%
+  left_join(starvation.wild.1.s[[2]], by = c("pop", "lat", "gen")) %>%
+  select("pmedian.x", "pmedian.y") %>% 
+  dplyr::rename(Female_starvation = "pmedian.x") %>%
+  dplyr::rename(Male_starvation = "pmedian.y")
+
+### Correlation treatments: 
+
+corr.desiccation.and.starvation.females <- desiccant.wild.1.s[[1]] %>%
+  dplyr::select("pop", "lat", "gen", "pmedian", "trt") %>%
+  left_join(starvation.wild.1.s[[1]], by = c("pop", "lat", "gen")) %>%
+  dplyr::select("pmedian.x", "pmedian.y") %>% 
+  dplyr::rename(Female_desiccation = "pmedian.x") %>%
+  dplyr::rename(Female_starvation = "pmedian.y") %>% 
+  dplyr::mutate()
+
+### Correlation treatments: 
+
+corr.desiccation.and.starvation.wild.males <- desiccant.wild.1.s[[2]] %>%
+  dplyr::select("pop", "lat", "gen", "pmedian", "trt") %>%
+  left_join(starvation.wild.1.s[[2]], by = c("pop", "lat", "gen")) %>%
+  dplyr::select("pmedian.x", "pmedian.y") %>% 
+  dplyr::rename(Male_desiccation = "pmedian.x") %>%
+  dplyr::rename(Male_starvation = "pmedian.y")
+
+### Correlation sexes in domesticated desiccant: 
+
+corr.wild.desiccant.sex <- desiccant.domes.1.s[[1]] %>%
+  dplyr::select("pop", "lat", "gen", "trt","pmedian") %>%
+  left_join(desiccant.domes.1.s[[2]], by = c("pop", "lat", "gen")) %>%
+  dplyr::select("pmedian.x", "pmedian.y") %>% 
+  dplyr::rename(Female_desiccant = "pmedian.x") %>%
+  dplyr::rename(Male_desiccant = "pmedian.y")
+
+### Correlation sexes in domesticated starvation:
+
+corr.wild.starvation.sex <- starvation.domes.1.s[[1]] %>%
+  dplyr::select("pop", "lat", "gen", "trt", "pmedian") %>%
+  left_join(starvation.domes.1.s[[2]], by = c("pop", "lat", "gen")) %>%
+  dplyr::select("pmedian.x", "pmedian.y") %>% 
+  dplyr::rename(Female_starvation = "pmedian.x") %>%
+  dplyr::rename(Male_starvation = "pmedian.y")
+
+### Correlation treatments: 
+
+corr.desiccation.and.starvation.females <- desiccant.domes.1.s[[1]] %>%
+  dplyr::select("pop", "lat", "gen", "pmedian", "trt") %>%
+  left_join(starvation.domes.1.s[[1]], by = c("pop", "lat", "gen")) %>%
+  dplyr::select("pmedian.x", "pmedian.y") %>% 
+  dplyr::rename(Female_desiccation = "pmedian.x") %>%
+  dplyr::rename(Female_starvation = "pmedian.y")
+
+### Correlation treatments: 
+
+corr.desiccation.and.starvation.domes.males <- desiccant.domes.1.s[[2]] %>%
+  dplyr::select("pop", "lat", "gen", "pmedian", "trt") %>%
+  left_join(starvation.domes.1.s[[2]], by = c("pop", "lat", "gen")) %>%
+  dplyr::select("pmedian.x", "pmedian.y") %>% 
+  dplyr::rename(Male_desiccation = "pmedian.x") %>%
+  dplyr::rename(Male_starvation = "pmedian.y")
+
+
+### Correlation old vs domesticated females desiccation:
+
+corr.desiccation.domes.wild.females <- desiccant.wild.1.s[[1]] %>% 
+  dplyr::select("pop", "pmedian") %>%
+  left_join(desiccant.domes.1.s[[1]], by =c("pop")) %>%
+  dplyr::select("pmedian.x", "pmedian.y") %>%
+  dplyr::rename(Wild_Females = "pmedian.x") %>%
+  dplyr::rename(Domesticated_Females = "pmedian.y")
+
+corr.desiccation.domes.wild.females.prop <- desiccant.wild.1.s[[1]] %>% 
+  dplyr::select("pop", "lat", "sex","pmedian", "trt", "proportion") %>%
+  left_join(desiccant.domes.1.s[[1]], by =c("pop", "lat", "sex")) %>%
+  mutate(change = round(pmedian.y/pmedian.x,2)) %>%
+  dplyr::select("pop", "lat", "sex", "status", "trt.x", "proportion.x", 
+         "pmedian.x", "trt.y", "proportion.y", "pmedian.y", "change") %>%
+  dplyr::rename(Wild = "pmedian.x") %>%
+  dplyr::rename(Domesticated = "pmedian.y") %>%
+  dplyr::rename(proportion.wild = "proportion.x") %>%
+  dplyr::rename(proportion.domes = "proportion.y")
+
+### Correlation old vs domesticated males desiccation:
+corr.desiccation.domes.wild.males <- desiccant.wild.1.s[[2]] %>% 
+  dplyr::select("pop", "pmedian") %>%
+  left_join(desiccant.domes.1.s[[2]], by =c("pop")) %>%
+  dplyr::select("pmedian.x", "pmedian.y") %>%
+  dplyr::rename(Wild_Males = "pmedian.x") %>%
+  dplyr::rename(Domesticated_Males = "pmedian.y")
+
+corr.desiccation.domes.wild.males.prop <- desiccant.wild.1.s[[2]] %>% 
+  dplyr::select("pop", "lat", "sex","pmedian", "trt", "proportion") %>%
+  left_join(desiccant.domes.1.s[[2]], by =c("pop", "lat", "sex")) %>%
+  mutate(change = round(pmedian.y/pmedian.x,2)) %>%
+  dplyr::select("pop", "lat", "sex", "status", "trt.x", "proportion.x", 
+         "pmedian.x", "trt.y", "proportion.y", "pmedian.y", "change") %>%
+  dplyr::rename(Wild = "pmedian.x") %>%
+  dplyr::rename(Domesticated = "pmedian.y") %>%
+  dplyr::rename(proportion.wild = "proportion.x") %>%
+  dplyr::rename(proportion.domes = "proportion.y")
+
+### Correlation old vs domesticated females starvation:
+
+corr.starvation.domes.wild.females <- starvation.wild.1.s[[1]] %>% 
+  dplyr::select("pop", "pmedian") %>%
+  left_join(starvation.domes.1.s[[1]], by =c("pop")) %>%
+  dplyr::select("pmedian.x", "pmedian.y") %>%
+  dplyr::rename(Wild_Females = "pmedian.x") %>%
+  dplyr::rename(Domesticated_Females = "pmedian.y")
+
+corr.starvation.domes.wild.females.prop <- starvation.wild.1.s[[1]] %>% 
+  dplyr::select("pop", "lat", "sex","pmedian", "trt", "proportion") %>%
+  left_join(starvation.domes.1.s[[1]], by =c("pop", "lat", "sex")) %>%
+  mutate(change = round(pmedian.y/pmedian.x,2)) %>%
+  dplyr::select("pop", "lat", "sex", "status", "trt.x", "proportion.x", 
+         "pmedian.x", "trt.y", "proportion.y", "pmedian.y", "change") %>%
+  dplyr::rename(Wild = "pmedian.x") %>%
+  dplyr::rename(Domesticated = "pmedian.y") %>%
+  dplyr::rename(proportion.wild = "proportion.x") %>%
+  dplyr::rename(proportion.domes = "proportion.y")
+
+### Correlation old vs domesticated males starvation:
+
+corr.starvation.domes.wild.males <- desiccant.wild.1.s[[2]] %>% 
+  dplyr::select("pop", "pmedian") %>%
+  left_join(starvation.domes.1.s[[2]], by =c("pop")) %>%
+  dplyr::select("pmedian.x", "pmedian.y") %>%
+  dplyr::rename(Wild_Males = "pmedian.x") %>%
+  dplyr::rename(Domesticated_Males = "pmedian.y")
+
+corr.starvation.domes.wild.males.prop <- starvation.wild.1.s[[2]] %>% 
+  dplyr::select("pop", "lat", "sex","pmedian", "trt", "proportion") %>%
+  left_join(starvation.domes.1.s[[2]], by =c("pop", "lat", "sex")) %>%
+  mutate(change = round(pmedian.y/pmedian.x,2)) %>%
+  dplyr::select("pop", "lat", "sex", "status", "trt.x", "proportion.x", 
+         "pmedian.x", "trt.y", "proportion.y", "pmedian.y", "change") %>%
+  dplyr::rename(Wild = "pmedian.x") %>%
+  dplyr::rename(Domesticated = "pmedian.y") %>%
+  dplyr::rename(proportion.wild = "proportion.x") %>%
+  dplyr::rename(proportion.domes = "proportion.y")
+
+#### Proportions of change in domestication
+
+desiccation.change.domestication <- corr.desiccation.domes.wild.males.prop %>% 
+  bind_rows(corr.starvation.domes.wild.males.prop)
+
+#corr.starvation.domes.wild.females.prop, corr.starvation.domes.wild.males.prop)
+
+desiccation.change.domestication <- desiccation.change.domestication %>% 
+  dplyr::ungroup() %>%
+  dplyr::group_by(.dots =c("pop", "sex", "status", "trt.x")) %>% 
+  dplyr::mutate(change = round(mean(change),3)) %>%
+  dplyr::mutate(proportion.wild = round(mean(proportion.wild),3)) %>%
+  dplyr::mutate(proportion.domes = round(mean(proportion.domes),3)) %>%
+  dplyr::ungroup() %>%
+  dplyr::select(-c("Domesticated", "Wild")) %>%
+  dplyr::mutate(trt.x = case_when(trt.x == "Control" ~ "Starvation", trt.x == "Desiccant" ~ "Desiccation")) %>%
+  dplyr::distinct() %>%
+  droplevels()
+  
+#### Proportion of change in domestication by generation: 
+
+propotional.change.generations <-  desiccation.1 %>%
+  filter(!gen %in% c("G2_9", "G3_9")) %>%
+  ungroup() %>%
+  dplyr::select("pop", "sex", "rep","gen", "lat", "trt", "nemedian", "nmedian", "pmedian") %>%
+  dplyr::filter(!pop %in% c("S06")) %>%
+  dplyr::mutate(gen = case_when(gen == "G10" ~ "G10+", gen == "G11" ~ "G10+", TRUE ~ as.character(gen))) %>% 
+  dplyr::mutate(trt = case_when(trt == "Control" ~ "Starvation", trt == "Desiccant" ~ "Desiccation")) %>%
+  distinct() %>% 
+  droplevels() %>%
+  ungroup() %>%
+  group_by(.dots=c("pop", "sex", "rep", "trt")) %>%
+  dplyr::mutate(proportion = round(nmedian/nemedian,2)) %>%
+  ungroup() %>% 
+  group_by() %>% 
+  group_split(gen)
+
+##### Correlation between treatments wild: ----
+
+## Males: 
+
+corr.trt.wild.males <- cold.wild.1.s[[2]] %>% 
+  dplyr::select("pop", "pmedian") %>%
+  left_join(heat.wild.1.s[[2]], by =c("pop")) %>% 
+  dplyr::rename(Cold_wild_males = "pmedian.x") %>%
+  dplyr::rename(Heat_wild_males = "pmedian.y") %>%
+  left_join(desiccant.wild.1.s[[2]], by = c("pop")) %>% 
+  dplyr::rename(Desiccant_wild_males = "pmedian") %>% 
+  left_join(starvation.wild.1.s[[2]], by = c("pop")) %>%
+  dplyr::rename(Starvation_wild_males = "pmedian") %>%
+  dplyr::select("Heat_wild_males", "Cold_wild_males", "Desiccant_wild_males", "Starvation_wild_males")
+
+##### Correlation between treatments domesticated: 
+
+
+## Males:
+
+corr.trt.domesticated.males <- heat.old.1.s[[2]] %>% 
+  dplyr::select("pop", "pmedian") %>%
+  left_join(cold.old.1.s[[2]], by =c("pop")) %>% 
+  dplyr::rename(Heat_domes_males = "pmedian.x") %>%
+  dplyr::rename(Cold_domes_males = "pmedian.y") %>%
+  left_join(desiccant.domes.1.s[[2]], by = c("pop")) %>% 
+  dplyr::rename(Desiccant_domes_males = "pmedian") %>% 
+  left_join(starvation.domes.1.s[[2]], by = c("pop")) %>%
+  dplyr::rename(Starvation_domes_males = "pmedian") %>%
+  dplyr::select("Heat_domes_males", "Cold_domes_males", "Desiccant_domes_males", "Starvation_domes_males")
+
+# ------ Repeatibility of results -----
+
+desiccation.repeat.AS_SY <- desiccation.1 %>%
+  filter(gen %in% c("G2", "G2_9", "G3_9")) %>%
+  filter(pop %in% c("Alice Springs", "Sydney")) %>%
+  mutate(pop_gen = paste(pop, gen, sep = "_"))
+
+repeated.desiccation.raw <- read_csv("data/Master_desiccation_resampling.csv") 
+
+repeated.desiccation.all <- repeated.desiccation.raw %>% mutate_at(vars(-c(time)), list(factor)) %>% 
+  filter(gens %in% c("G0","G2", "G3","G4", "G100")) %>% droplevels()
+  
+repeated.desiccation.s06 <- repeated.desiccation.all %>%
+  filter(pop == "S06") %>% 
+  group_by(exp) %>% 
+  mutate(emedian = round(median(time),2)) %>% 
+  ungroup() %>% 
+  mutate(median = round(mean(emedian),2)) %>%
+  group_by(exp, emedian, median) %>%
+  summarise()
+
+repeated.desication.all <- repeated.desiccation.all %>% left_join(repeated.desiccation.s06, by = "exp")
+
+repeated.desiccation.analysis <- repeated.desication.all %>% 
+  group_by(exp) %>%
+  mutate(rtime = round(time/(emedian/median),2)) %>%
+  ungroup() %>%
+  group_by(.dots=c("pop", "exp", "gen")) %>%
+  mutate(nmedian = round(median(time),2)) %>%
+  mutate(pmedian = round(median(rtime),2)) %>%
+  mutate(proportion = round(nmedian/emedian,2)) %>%
+  mutate(proportion.trial = round(pmedian/median,2)) %>%
+  ungroup() %>%
+  dplyr::select(c("pop", "exp", "gens", "gen", "rtime", "time")) %>%
+  filter(!pop == "S06") %>%
+  distinct() %>% 
+  droplevels()
+
+repeated.desiccation <- repeated.desication.all %>% 
+  group_by(exp) %>%
+  mutate(rtime = round(time/(emedian/median),2)) %>%
+  ungroup() %>%
+  group_by(.dots=c("pop", "exp", "gen")) %>%
+  mutate(nmedian = round(median(time),2)) %>%
+  mutate(pmedian = round(median(rtime),2)) %>%
+  mutate(proportion = round(nmedian/emedian,2)) %>%
+  mutate(proportion.trial = round(pmedian/median,2)) %>%
+  ungroup() %>%
+  dplyr::select(c("pop", "exp", "gens", "gen", "median", "nmedian", "emedian","proportion", "proportion.trial")) %>%
+  filter(!pop == "S06") %>%
+  distinct() %>% 
+  droplevels()
+
+
+# Desiccation
+
+desiccant.repeat <- desiccation.repeat.AS_SY %>%
+  dplyr::filter(trt == "Desiccant") %>%
+  droplevels()
+
+desiccant.repeat.s <- desiccant.repeat %>%
+  ungroup() %>%
+  dplyr::select("pop", "gen", "pop_gen", "sex", "lat", "nemedian", 
+                "median", "nmedian", "pmedian", "rtime") %>%
+  ungroup() %>%
+  group_by(sex, pop) %>%
+  group_split() # 1 Females; 2. Males
+  
+desiccant.repeat.s[[1]] <- desiccant.repeat.s[[1]] %>% droplevels()
+desiccant.repeat.s[[2]] <- desiccant.repeat.s[[2]] %>% droplevels()
+desiccant.repeat.s[[3]] <- desiccant.repeat.s[[3]] %>% droplevels()
+desiccant.repeat.s[[4]] <- desiccant.repeat.s[[4]] %>% droplevels()
+#Starvation
+starvation.repeat <- desiccation.repeat.AS_SY %>% 
+  dplyr::filter(trt == "Control") %>%
+  droplevels()
+
+starvation.repeat.s <- starvation.repeat %>%
+  ungroup() %>%
+  dplyr::select("pop", "gen", "pop_gen", "sex", "lat", "nemedian", 
+                "median", "nmedian", "pmedian", "rtime") %>%
+  ungroup() %>%
+  group_by(sex, pop) %>%
+  group_split() # 1 Females; 2. Males
+  
+starvation.repeat.s[[1]] <- starvation.repeat.s[[1]] %>% droplevels()
+starvation.repeat.s[[2]] <- starvation.repeat.s[[2]] %>% droplevels()
+starvation.repeat.s[[3]] <- starvation.repeat.s[[3]] %>% droplevels()
+starvation.repeat.s[[4]] <- starvation.repeat.s[[4]] %>% droplevels()
+
+desiccant.wild.v.domes <- desiccation.1 %>% 
+  ungroup() %>%
+  dplyr::filter(!gen %in% c("G2_9", "G3_9")) %>%
+  dplyr::filter(trt == "Desiccant") %>%
+  dplyr::filter(sex == "Male") %>%
+  dplyr::mutate(pop = as.factor(pop)) %>% 
+  dplyr::mutate(gens = as.numeric(gsub("[^0-9]", "", gen))) %>% 
+  dplyr::mutate(status = case_when(gen == "G2" ~ "Wild", gen == "G10" ~ "Domesticated", gen == "G11" ~ "Domesticated", TRUE ~ as.character(gen))) %>% 
+  dplyr::mutate(trt = case_when(trt == "Desiccant" ~ "Desiccation")) %>%
+  dplyr::filter(status %in% c("Wild", "Domesticated")) %>%
+  dplyr::filter(!pop %in% c("Cape Tribulation", "Darwin", "Canberra", "Bega Valley", "S06")) %>%
+  dplyr::select("pop", "gens", "trt", "status", "rtime") %>% 
+  droplevels()
+
+desiccant.wild.v.domes$status <- factor(desiccant.wild.v.domes$status, levels = c("Domesticated", "Wild"))
+
+starvation.wild.v.domes <- desiccation.1 %>% 
+  ungroup() %>%
+  dplyr::filter(!gen %in% c("G2_9", "G3_9")) %>%
+  dplyr::filter(trt == "Control") %>%
+  dplyr::filter(sex == "Male") %>%
+  dplyr::mutate(pop = as.factor(pop)) %>% 
+  dplyr::mutate(gens = as.numeric(gsub("[^0-9]", "", gen))) %>% 
+  dplyr::mutate(status = case_when(gen == "G2" ~ "Wild", gen == "G10" ~ "Domesticated", gen == "G11" ~ "Domesticated", TRUE ~ as.character(gen))) %>% 
+  dplyr::mutate(trt = case_when(trt == "Desiccant" ~ "Desiccation")) %>%
+  dplyr::filter(status %in% c("Wild", "Domesticated")) %>%
+  dplyr::filter(!pop %in% c("Cape Tribulation", "Darwin", "Canberra", "Bega Valley", "S06")) %>%
+  dplyr::select("pop", "gens", "trt", "status", "rtime") %>% 
+  droplevels()
+
+starvation.wild.v.domes$status <- factor(starvation.wild.v.domes$status, levels = c("Domesticated", "Wild"))
+
+```
+
+```{r Helper functions and packages in R used in the statistical analyses, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+require(pander)
+panderOptions('table.split.table', Inf)
+set.caption("\\textbf{Helper functions and packages in R used in the statistical analyses}")
+my.data <- " 
+| **R session information:** | | 
+
+**Based Packages attached:**
+
+| grid               | stats                  | graphics           
+| methods            | base                   | grDevices utils   
+| datasets            | | 
+
+**Attached Packages:** 
+
+| wesanderson_0.3.6  | readr_1.3.1            | boot_1.3-20      
+| nortest_1.0-4      | jtrans_0.2.1           | Hmisc_4.2-0 
+| Formula_1.2-3      | survival_2.43-3        | lattice_0.20-35  
+| xtable_1.8-3       | psych_1.8.12           | egg_0.4.2
+| gridExtra_2.3      | sp_1.3-1               | ggalluvial_0.9.1     
+| purrr_0.3.0        | stargazer_5.2.2        | cowplot_0.9.4    
+| magrittr_1.5       | ggridges_0.5.1         | ggplot2_3.1.0    
+| dplyr_0.8.0        | emmeans_1.3.3.0999901  | RColorBrewer_1.1-2
+| ggpubr_0.2        | |   
+
+**Packages loaded via namespace**
+
+| httr_1.4.0          | tidyr_0.8.2            | viridisLite_0.3.0  
+| splines_3.4.4       | assertthat_0.2.0       | highr_0.7          
+| latticeExtra_0.6-28 | yaml_2.2.0             | sessioninfo_1.1.1   
+| pillar_1.3.1        | backports_1.1.3        | glue_1.3.0
+| digest_0.6.18       | checkmate_1.9.1        | rvest_0.3.2        
+| colorspace_1.4-0    | sandwich_2.5-0         | captioner_2.2.3    
+| htmltools_0.3.6     | Matrix_1.2-14          | plyr_1.8.4         
+| pkgconfig_2.0.2     | mvtnorm_1.0-8          | webshot_0.5.1       
+| scales_1.0.0        | htmlTable_1.13.1       | tibble_2.0.1     
+| TH.data_1.0-10      | withr_2.1.2            | nnet_7.3-12  
+| lazyeval_0.2.1      | cli_1.0.1              | mnormt_1.5-5
+| crayon_1.3.4        | estimability_1.3       | evaluate_0.13      
+| fansi_0.4.0         | nlme_3.1-137           | MASS_7.3-50    
+| xml2_1.2.0          | foreign_0.8-70         | tools_3.4.4    
+| data.table_1.12.0   | hms_0.4.2              | multcomp_1.4-8
+| stringr_1.4.0       | munsell_0.5.0          | cluster_2.0.7-1    
+| kableExtra_1.0.1    | compiler_3.4.4         | rlang_0.3.1        
+| rstudioapi_0.9.0    | htmlwidgets_1.3        | labeling_0.3
+| base64enc_0.1-3     | rmarkdown_1.11         | gtable_0.2.0 
+| codetools_0.2-15    | R6_2.3.0               | zoo_1.8-4          
+| knitr_1.21          | utf8_1.1.4             | stringi_1.3.1
+| parallel_3.4.4      | Rcpp_1.0.0             | rpart_4.1-13       
+| acepack_1.4.1       | tidyselect_0.2.5       | xfun_0.4            
+| coda_0.19-2 | |
+"
+
+df <- read.delim(textConnection(my.data),header=FALSE,sep="|",strip.white=TRUE,stringsAsFactors=FALSE)
+names(df) <- unname(as.list(df[1,])) # put headers on
+df <- df[-1,] # remove first row
+row.names(df)<-NULL
+pander(df, style = 'rmarkdown', justify = "left")
+```
+
+\newpage
+
+```{r table2, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+require(pander)
+panderOptions('table.split.table', Inf)
+set.caption("\\textbf{Methodological differences between the standard desiccation tolerance assay and that used for the resampled 2017/2018 collection}")
+my.data <- " 
+  Difference in protocol              | First collection                 | Resampled collection
+  Egg collection                      | Egging device                    | Baby (vine) capsicum 
+  Larvae rearing                      | Gel diet (Mohadeli et al., 2017) | Gel diet and baby (vine) capsicum 
+  Tubes                               | 5 mL                             | 10 mL
+  Desiccant                           | 8 silica gel beads               | 0.5g silica gel packet
+  Scoring after 16 hours              | Every 2 hours                    | Every 3 hours"
+
+df <- read.delim(textConnection(my.data),header=FALSE,sep="|",strip.white=TRUE,stringsAsFactors=FALSE)
+names(df) <- unname(as.list(df[1,])) # put headers on
+df <- df[-1,] # remove first row
+row.names(df)<-NULL
+pander(df, style = 'rmarkdown', justify = c("left","left", "left"))
+```
+
+\newpage
+
+
+```{r S3 Table, results='asis'}
+#options(digits = 3, scipen = -2)
+
+# Heat
+heat.domes.3$status <- factor(heat.domes.3$status, levels = c("Domesticated", "Wild"))
+glm.heat.domes <- glm(rtime ~ pop + status + pop*status, family = Gamma(link = "log"), data = heat.domes.3)
+
+pairwise.glm.heat <- emmeans(glm.heat.domes, pairwise ~ status | pop, type = "response") 
+
+# Desccation
+
+desiccation.glm.wild.v.dom <- glm(rtime ~ pop + status + pop*status, family = Gamma(link = "log"), data = desiccant.wild.v.domes)
+
+desiccation.pairwise.glm.wild.v.dom <- emmeans(desiccation.glm.wild.v.dom, pairwise ~ status | pop, type = "response") 
+
+# Starvation
+
+starvation.glm.wild.v.dom <- glm(rtime ~ pop + status + pop*status, family = Gamma(link = "log"), data = starvation.wild.v.domes)
+
+pairwise.starvation.glm.wild.v.dom <- emmeans(starvation.glm.wild.v.dom, pairwise ~ status | pop, type = "response") 
+
+
+# Combine tables
+
+rbind(data.frame(pairwise.glm.heat$contrasts),
+      data.frame(desiccation.pairwise.glm.wild.v.dom$contrasts),
+      data.frame(pairwise.starvation.glm.wild.v.dom$contrasts)) %>% 
+  rename(Population = "pop") %>% 
+  select(-c("contrast", "df")) %>%
+  #mutate(Treatment = make.unique(Treatmment)) %>%
+  knitr::kable(digits = 2, 
+               format = "latex",  
+               booktabs = TRUE,
+               caption = "\\textbf{Individal populations for which the wild (G2/G3) and domesticated (G10-15) bioassay results differed signficantly.} Contrast are calculated for the estimated mean response variable for each population by looking at the differences of the domesticated over the wild populations. The estimated mean of teh contrast are calculated on the log transformed data for the response variables") %>% 
+  kableExtra::kable_styling() %>% 
+  kableExtra::group_rows("Heat", 1, 9) %>%
+  kableExtra::group_rows("Desiccation", 10, 17) %>%
+  kableExtra::group_rows("Starvation", 18, 25)
+
+```
+
+
+\newpage
+```{r FigS1 Heat units, fig.align= "center", fig.cap= "Picture of the egging device.", out.width="80%", out.extra='angle=270'}
+knitr::include_graphics("Supplementary_files/figure-latex/Egging_device.jpg")
+```
+
+\newpage
+
+```{r FigS2, fig.width= 8, fig.height=4, fig.cap="Results pilot experiment on heat knockdown time. Data are presented as knockdown time in minutes on two different exposure temperature for S06 flies. Significance differences of means between temperatures are reported with Wilcox test P-value."}
+
+heat.temp <-read_csv("./data/KM_Dif_Temp.csv", col_types = cols()) 
+
+heat.temp <- heat.temp %>% mutate_at(vars("Line", "Sex", "Exp", "Temp"), list(factor)) %>% filter(Sex == "Male") %>% filter(!Exp == "45C")
+my_comparisons <- list(c("42", "43"))
+
+
+
+ggplot(heat.temp) + 
+  theme_bw() + 
+  aes(x = Temp, y = Time, colour = Exp, group = Exp) + 
+  geom_point(alpha = 0.3, position = position_jitter(width = 0.15)) +
+	geom_boxplot(alpha = 0.7, size = 0.75, width = 0.25) + 
+  xlab("\n Temparature treatment") +
+  ylab("Knockdown time (min) \n") + 
+  ylim(-5, 81) +
+  scale_fill_manual(values = wes_palette(n = 3, name="Royal1"), labels=c(expression(42~degree~C, 43~degree~C))) + 
+  scale_color_manual(values = wes_palette(n = 3, name="Royal1"), labels=c(expression(42~degree~C, 43~degree~C))) + 
+  stat_compare_means(comparisons = my_comparisons, method = "t.test") + 
+  theme(axis.title.x=element_text(size=16)) + 
+  theme(axis.title.y=element_text(size=16)) + 
+  scale_x_discrete(labels=c(expression(42~degree~C, 43~degree~C))) +
+  labs(colour = "Temperature")
+
+```
+\newpage
+\blandscape
+```{r FigS3 Cold units, fig.align= "center", fig.cap= "Units for cold recovery treatment"}
+knitr::include_graphics("Supplementary_files/figure-latex/Units_for_chill_coma_recovery_assay.pdf")
+```
+\elandscape
+
+\newpage
+\blandscape
+
+```{r Weather variables correlation for selection, results= "asis", fig.show= "asis", fig.width= 16, fig.height=12,  out.width="90%", fig.cap="\\textbf{Correlation among 11 climatic variables}. Correlation values are presented together with asterisk indicating signficance values for each correlation. Variables names are indicative of the following weather variables: \\textbf{mean.max}= Annual max temperature; \\textbf{mean.min} = Annual mim temperature; \\textbf{mean.rain} = Annual rainfall; \\textbf{mean.solar}= Annual solar exposure; annual.temp = Annual temperature; max.high.temp = Maximum temperature of the warmest month; low.high.temp = Mimimum temperature of the warmest month; low.min.temp = Minimum temperature of the coldest month; \\textbf{high.min.temp} = Minimum temperature of the coldest month; \\textbf{min.dry.month}= Precipitation of the driest month; \\textbf{max.wet.month} = Precipitation of the wettest month."}
+suppressWarnings(suppressPackageStartupMessages(library(PerformanceAnalytics)))
+
+chart.Correlation(weather_variables[,-1])
+```
+\elandscape
+
+
+```{r Diagnostic plots heat tolerance wild flies, fig.height=10,  fig.width=12, fig.cap="Diagnostic plots Gamma-GLM heat tolerance in wild populations of the Queensland fruit fly"}
+
+glm.diag.plots(glm(rtime ~ pop, data = heat.wild.s[[2]], family = Gamma(link = "log")))
+```
+
+```{r Diagnostic plots heat tolerance in domesticated flies, fig.height=10, fig.width=12, fig.cap="Diagnostic plots Gamma-GLM heat tolerance in domesticated populations of the Queensland fruit fly"}
+
+glm.diag.plots(glm(rtime ~ pop, data = heat.old.s[[2]], family = Gamma(link = "log")))
+
+```
+
+```{r Diagnostic plots heat tolerance during domestication, fig.height=10,  fig.width=12, fig.cap="Diagnostic plots Gamma-GLM heat tolerance change during domestication"}
+
+
+glm.diag.plots(glm(rtime ~ pop + status + pop*status, data = heat.domes.3, family = Gamma(link = "log")))
+
+```
+
+```{r Diagnostic plots cold tolerance wild flies, fig.height=10,  fig.width=12, fig.cap="Diagnostic plots Gamma-GLM cold tolerance in wild populations of the Queensland fruit fly"}
+
+glm.diag.plots(glm(rtime ~ pop, data = cold.wild.s[[2]], family = Gamma(link = "log")))
+
+```
+
+```{r Diagnostic plots cold tolerance in domesticated flies, fig.height=10, fig.width=12, fig.cap="Diagnostic plots Gamma-GLM heat tolerance in domesticated populations of the Queensland fruit fly"}
+
+glm.diag.plots(glm(rtime ~ pop, data = cold.old.s[[2]], family = Gamma(link = "log")))
+```
+
+```{r Diagnostic plots cold tolerance during domestication, fig.height=10,  fig.width=12, fig.cap="Diagnostic plots Gamma-GLM cold tolerance change during domestication"}
+cold.trt.p.3.domes <- cold.trt.p.3 %>% 
+  filter(!pop %in% c("Bega Valley", "Canberra", "Cape Tribulation")) %>% 
+  filter(sex== "Male") %>% droplevels()
+
+glm.diag.plots(glm(rtime ~ pop + status + pop*status, data = cold.trt.p.3.domes, family = Gamma(link = "log")))
+
+```
+
+
+```{r data for desiccation and starvation, include=FALSE}
+desiccant.wild.v.domes <- desiccation.1 %>% 
+  ungroup() %>%
+  dplyr::filter(!gen %in% c("G2_9", "G3_9")) %>%
+  dplyr::filter(trt == "Desiccant") %>%
+  dplyr::filter(sex == "Male") %>%
+  dplyr::mutate(pop = as.factor(pop)) %>% 
+  dplyr::mutate(gens = as.numeric(gsub("[^0-9]", "", gen))) %>% 
+  dplyr::mutate(status = case_when(gen == "G2" ~ "Wild", gen == "G10" ~ "Domesticated", gen == "G11" ~ "Domesticated", TRUE ~ as.character(gen))) %>% 
+  dplyr::mutate(trt = case_when(trt == "Desiccant" ~ "Desiccation")) %>%
+  dplyr::filter(status %in% c("Wild", "Domesticated")) %>%
+  dplyr::filter(!pop %in% c("Cape Tribulation", "Darwin", "Canberra", "Bega Valley", "S06")) %>%
+  dplyr::select("pop", "gens", "trt", "status", "rtime") %>% 
+  droplevels()
+
+desiccant.wild.v.domes$status <- factor(desiccant.wild.v.domes$status, levels = c("Domesticated", "Wild"))
+
+starvation.wild.v.domes <- desiccation.1 %>% 
+  ungroup() %>%
+  dplyr::filter(!gen %in% c("G2_9", "G3_9")) %>%
+  dplyr::filter(trt == "Control") %>%
+  dplyr::filter(sex == "Male") %>%
+  dplyr::mutate(pop = as.factor(pop)) %>% 
+  dplyr::mutate(gens = as.numeric(gsub("[^0-9]", "", gen))) %>% 
+  dplyr::mutate(status = case_when(gen == "G2" ~ "Wild", gen == "G10" ~ "Domesticated", gen == "G11" ~ "Domesticated", TRUE ~ as.character(gen))) %>% 
+  dplyr::mutate(trt = case_when(trt == "Desiccant" ~ "Desiccation")) %>%
+  dplyr::filter(status %in% c("Wild", "Domesticated")) %>%
+  dplyr::filter(!pop %in% c("Cape Tribulation", "Darwin", "Canberra", "Bega Valley", "S06")) %>%
+  dplyr::select("pop", "gens", "trt", "status", "rtime") %>% 
+  droplevels()
+
+starvation.wild.v.domes$status <- factor(starvation.wild.v.domes$status, levels = c("Domesticated", "Wild"))
+```
+
+```{r Diagnostic plots desiccation wild populations, fig.height=10,  fig.width=12, fig.cap="Diagnostic plots Gamma-GLM desiccation tolerance in wild Qfly populations"}
+
+glm.diag.plots(glm(rtime ~ pop, family = Gamma(link = "log"), data = desiccant.wild.s[[2]]))
+
+```
+
+```{r Diagnostic plots desiccation tolerance in domesticated flies, fig.height=10, fig.width=12, fig.cap="Diagnostic plots Gamma-GLM desiccation tolerance in domesticated populations of the Queensland fruit fly"}
+
+desiccant.wild.v.domes.diff <- desiccant.wild.v.domes %>% filter(status == "Domesticated") %>% droplevels()
+
+glm.diag.plots(glm(rtime ~ pop , family = Gamma(link = "log"), data = desiccant.wild.v.domes))
+
+```
+
+
+```{r Diagnostic plots desiccation change during domestication, fig.height=10,  fig.width=12, fig.cap="Diagnostic plots Gamma-GLM desiccation tolerance change during domestication"}
+
+glm.diag.plots(glm(rtime ~ pop + gens + pop*gens, family = Gamma(link = "log"), data = desiccant.glm))
+
+```
+
+
+```{r Diagnostic plots starvation wild populations, fig.height=10,  fig.width=12, fig.cap="Diagnostic plots Gamma-GLM starvation tolerance in wild Qfly populations"}
+
+glm.diag.plots(glm(rtime ~ pop, family = Gamma(link = "log"), data = starvation.wild.s[[2]]))
+
+```
+
+```{r Diagnostic plots starvation tolerance in domesticated flies, fig.height=10, fig.width=12, fig.cap="Diagnostic plots Gamma-GLM starvation tolerance in domesticated populations of the Queensland fruit fly"}
+
+starvation.wild.v.domes.diff <- starvation.wild.v.domes %>% filter(status == "Domesticated") %>% droplevels()
+
+glm.diag.plots(glm(rtime ~ pop , family = Gamma(link = "log"), data = starvation.wild.v.domes.diff))
+
+```
+
+
+```{r Diagnostic plots starvation change during domestication, fig.height=10,  fig.width=12, fig.cap="Diagnostic plots Gamma-GLM starvation tolerance change during domestication"}
+
+glm.diag.plots(glm(rtime ~ pop + gens + pop*gens, family = Gamma(link = "log"), data = starvation.glm))
+
+```
+
+
+\blandscape
+\elandscape
+### R session information: 
+```{r results="hold", size="small"}
+
+sessionInfo()
+
+```
+
+
+```{r}
+package <- grep("^package:", search(), value = TRUE)
+keep <- vapply(package, function(x) x == "package:base" || 
+                     !is.null(attr(as.environment(x), "path")), NA)
+
+package <- .rmpkg(package[keep])
+
+
+
+
+```
+

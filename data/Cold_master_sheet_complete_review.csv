@@ -1,0 +1,1475 @@
+pop,sex,time,gen,exp,trt,lat,lon,status
+S06,Male,77.07,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,79.57,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,83.51,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,84.11,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,87.56,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,87.57,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,91.66,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,92.06,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,92.27,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,93.72,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,95.14,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,95.92,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,96.01,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,96.94,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,97.73,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,98.16,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,98.26,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,99.93,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,101.83,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,104.36,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,104.93,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,104.95,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,105.37,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,105.91,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,107.5,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,108.09,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,109.02,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,110.17,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,111.07,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,111.1,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,111.77,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,113.73,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,114.12,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,120.18,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,120.25,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,121.33,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,123.4,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,124.38,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,125.22,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,125.72,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,125.83,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,126.09,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,126.19,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,129.28,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,131.65,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,132.09,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,134.85,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,139.56,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,145.16,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,147.06,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,158.4,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,180.5,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,181.38,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,184.7,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Male,184.85,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,196.77,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,296.04,G100-5,5,chill,-33.9,151.14,Domesticated
+S06,Female,128.88,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,142.6,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,143.85,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,152.15,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,156.12,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,159.35,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,160.88,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,161.38,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,162.7,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,166.23,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,170.37,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,176.7,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,177.65,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,178.43,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,183.15,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,185.67,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,186.03,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,188.37,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,192.97,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,195.4,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,212.03,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,220.32,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,220.98,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,222.83,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,228.87,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,298.68,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,298.68,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,298.68,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,298.68,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,298.68,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Female,72.43,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,73.2,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,81.47,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,82.4,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,83.2,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,84.45,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,85.72,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,86.05,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,88.02,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,88.37,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,88.98,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,89.85,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,90.28,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,90.92,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,93.88,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,94.28,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,95.63,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,96.42,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,97.12,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,97.62,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,100.35,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,102.72,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,103.82,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,103.87,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,103.93,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,105.32,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,105.57,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,107.52,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,108.02,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,109.55,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,109.6,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,111.55,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,115.07,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,118.08,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,118.38,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,118.5,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,119.68,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,123.25,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,124.72,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,125.6,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,129.77,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,131.9,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,135.58,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,138.42,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,142.42,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,145.65,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,147.7,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,149.4,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,151.85,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,164.28,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,171.02,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,179.75,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,185.5,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,194.75,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,201.82,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,207.1,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,299.6,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,299.6,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Female,299.6,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,299.6,G100-1,1,chill,-33.9,151.14,Domesticated
+S06,Male,96.72,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,104.52,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,106.42,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,113.22,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,121.12,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,123.8,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,123.95,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,127.45,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,128.65,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,129.82,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,130,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,135.18,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,136.03,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,139.65,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,139.93,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,140.32,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,140.68,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,141.55,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,141.78,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,142.95,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,145.82,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,146.47,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,148.05,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,149.17,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,149.62,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,152.8,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,159.78,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,175.42,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,176.25,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,177.63,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,178.28,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,181.85,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,183.95,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,186.53,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,197.5,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,198.93,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,204.08,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,210.17,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,211.45,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,217.87,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,218.63,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,252.23,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,252.92,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,253.1,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,253.28,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Female,268.23,G100-3,3,chill,-33.9,151.14,Domesticated
+S06,Male,122.4,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,130.25,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,131.42,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,144.72,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,144.77,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,148.4,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,148.85,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,149,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,151.55,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,156.77,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,157.92,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,159.32,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,159.63,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,159.9,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,165.8,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,171.2,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,176.4,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,177.35,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,180.33,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,182.63,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,186.7,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,187.23,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,189.93,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,191.12,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,214.23,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,216.8,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,224.47,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,277.63,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,298.25,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,298.68,G100-4,4,chill,-33.9,151.14,Domesticated
+S06,Male,73.17,G100-5,5,chill,-33.9,151.14,Domesticated
+Brisbane,Female,72.68,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,72.9,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,80.98,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,83.2,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,83.96,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,86.1,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,87.1,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,87.43,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,92.09,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,94.7,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,96.15,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,97.82,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,98.96,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,99.8,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,100.67,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,101.19,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,101.38,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,102.01,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,104.25,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,104.48,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,105.04,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,106.21,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,106.63,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,107.03,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,107.91,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,108.58,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,110.05,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,111.38,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,111.44,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,113.23,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,113.99,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,114.46,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,114.95,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,115.71,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,115.91,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,118.85,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,119.45,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,120.05,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,121.11,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,122.21,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,122.99,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,124.91,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,124.96,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,127.37,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,128.31,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,130.01,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,131.54,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,134.07,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,135.93,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,138.02,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,138.64,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,138.87,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,143.36,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,168.9,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,199.21,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Female,235.43,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,296.04,G12,5,chill,-27.41,152.9,Domesticated
+Brisbane,Male,296.04,G12,5,chill,-27.41,152.9,Domesticated
+Narrabri,Female,68.73,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,73.65,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,84.14,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,87.51,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,87.87,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,88.73,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,91.42,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,93.18,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,93.45,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,94.49,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,95.1,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,95.3,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,95.36,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,95.58,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,96.78,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,99.03,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,99.47,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,101.49,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,102.47,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,103.15,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,105.26,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,106.6,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,106.71,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,106.94,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,109.71,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,110.44,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,111.55,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,112.02,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,113.63,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,114.27,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,114.93,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,115.82,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,116.05,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,116.22,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,116.86,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,117.87,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,118.64,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,118.65,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,118.8,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,120.67,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,122.31,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,123.7,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,123.74,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,124.45,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,124.7,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,127.41,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,130.63,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,133.95,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,134.82,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,136.5,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,137.76,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,138.74,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,143.95,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,157.62,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,165.68,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,181.83,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,190.1,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Female,215.55,G12,5,chill,-30.33,149.78,Domesticated
+Narrabri,Male,282.78,G12,5,chill,-30.33,149.78,Domesticated
+Utchee Creek,Female,77.32,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,77.61,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,81.06,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,81.34,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,82.26,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,84.75,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,84.85,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,85.79,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,86.84,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,88.21,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,89.08,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,89.72,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,90.83,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,91.39,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,92.41,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,92.46,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,93.74,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,93.85,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,94.93,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,95.73,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,95.95,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,96.07,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,97.62,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,97.98,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,99.1,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,99.57,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,99.67,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,99.82,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,100.94,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,102.73,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,102.77,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,103.28,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,103.51,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,105.08,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,107.18,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,107.65,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,107.85,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,107.88,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,108.23,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,110.54,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,110.85,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,113.07,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,116.79,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,118.81,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,122.64,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,125.31,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,126.63,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,126.94,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,127.44,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,128.9,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,129.41,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,130.07,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,130.33,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,138.29,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Female,154.3,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,173.52,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,180.68,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,229.28,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,268.92,G12,5,chill,-17.6,145.99,Domesticated
+Utchee Creek,Male,296.04,G12,5,chill,-17.6,145.99,Domesticated
+Batemans Bay,Male,70.45,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,72.46,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,73.46,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,82.41,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,83.08,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,83.73,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,84.02,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,85.13,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,88.25,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,89.22,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,89.9,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,90.03,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,90.17,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,90.71,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,91.95,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,92.34,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,92.8,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,93.92,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,94.61,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,94.86,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,94.95,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,95.01,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,95.23,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,95.65,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,97.17,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,100.47,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,103.54,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,104.3,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,105.73,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,107.29,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,107.39,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,107.52,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,110.2,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,114.17,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,116.94,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,117.24,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,117.71,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,119.18,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,120.94,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,121.43,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,122.5,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,128.64,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,135.08,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,138.4,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,138.72,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,139.61,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,140.32,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,149.54,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,164.44,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,165.38,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,166.99,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,170.23,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,203.32,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,263.38,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,296.04,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Female,296.04,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,296.04,G13,5,chill,-35.7,150.19,Domesticated
+Batemans Bay,Male,296.04,G13,5,chill,-35.7,150.19,Domesticated
+Griffith,Female,73.32,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,74.53,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,76.88,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,77.24,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,82.31,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,82.34,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,82.94,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,87.14,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,88.7,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,89.51,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,94.19,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,94.68,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,94.81,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,96.2,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,96.42,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,96.46,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,97.36,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,97.68,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,98.81,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,99.01,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,101.85,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,101.93,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,102.31,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,102.85,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,102.92,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,104.15,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,104.39,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,104.75,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,105.77,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,106.66,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,107.16,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,108.27,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,109.86,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,110.8,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,111.35,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,113.43,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,116.82,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,117.77,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,119.07,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,120.53,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,121.72,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,122.26,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,124.6,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,125.11,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,125.18,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,125.42,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,127.01,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,128.59,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,129.49,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,135.53,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,138.37,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,139.31,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,149.62,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,154.48,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,171.41,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,173.5,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,185.46,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,218.08,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Female,296.04,G13,5,chill,-34.29,146.04,Domesticated
+Griffith,Male,296.04,G13,5,chill,-34.29,146.04,Domesticated
+Mareeba,Male,77,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,82.79,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,83.05,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,83.7,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,84.59,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,90.76,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,93.68,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,95.5,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,97.12,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,97.14,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,98.06,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,98.33,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,98.54,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,99.31,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,100.8,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,101.05,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,101.25,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,101.41,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,102.33,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,103.2,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,103.8,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,106.76,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,108.03,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,108.12,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,111.13,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,111.57,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,111.85,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,112.35,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,112.44,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,112.56,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,112.98,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,114.59,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,115.53,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,116.54,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,117.19,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,120.29,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,121.57,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,121.66,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,124.41,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,128.38,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,128.45,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,129.8,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,130.04,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,132.94,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,133.21,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,136.64,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,139.12,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,150.66,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,154.46,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,162.37,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,173.74,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,173.8,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,187.31,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,212.83,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,217.96,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Female,232.03,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,263.21,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,296.04,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,296.04,G13,5,chill,-17.01,145.43,Domesticated
+Mareeba,Male,296.04,G13,5,chill,-17.01,145.43,Domesticated
+Alice Springs,Female,80.42,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,87.18,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,88.07,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,90.44,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,92.36,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,95.78,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,96.11,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,96.72,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,97.79,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,98.57,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,99.64,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,100.5,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,103.11,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,103.24,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,103.56,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,105.22,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,107.69,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,108.34,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,109.65,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,110.22,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,111.92,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,112.05,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,115.94,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,118.38,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,118.61,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,119.31,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,119.8,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,121.14,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,121.2,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,121.39,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,121.78,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,121.82,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,123.3,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,123.48,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,124.06,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,125.26,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,127.82,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,129.58,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,130.76,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,131.13,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,135.95,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,138.17,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,139.33,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,154.16,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,159.24,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,159.56,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,163.35,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,163.74,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,165.04,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,172.89,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,189.14,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,190.32,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,199.86,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,216.02,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,230.14,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,260.31,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,296.04,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Female,296.04,G15,5,chill,-23.69,133.89,Domesticated
+Alice Springs,Male,296.04,G15,5,chill,-23.69,133.89,Domesticated
+Darwin,Female,70.76,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,82.57,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,82.9,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,85.94,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,87.67,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,89.84,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,90.73,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,91.12,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,91.31,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,91.33,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,92.69,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,93.12,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,93.22,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,93.54,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,96.36,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,98.83,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,100.39,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,100.57,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,101.16,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,101.34,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,102.89,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,103.01,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,103.12,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,103.77,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,104.65,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,105,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,105.57,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,106.56,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,106.87,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,107.79,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,108.04,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,108.49,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,110.14,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,110.34,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,112.41,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,116.07,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,117.81,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,119.35,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,119.9,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,122.24,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,123.33,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,125.4,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,128.62,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,128.76,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,129.61,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,131.23,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,131.43,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,136.03,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,142.6,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,145.35,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,150.33,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,154.71,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,169.91,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,173.48,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,178.91,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Male,190.58,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,263.59,G15,5,chill,-12.42,130.85,Domesticated
+Darwin,Female,296.04,G15,5,chill,-12.42,130.85,Domesticated
+Sydney,Female,67.64,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,78.73,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,81.7,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,82.19,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,82.71,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,85.83,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,86.14,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,86.98,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,87.21,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,87.29,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,89.39,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,89.42,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,89.93,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,90.37,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,91.79,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,93.95,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,94.38,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,94.42,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,95.54,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,99.07,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,99.72,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,99.77,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,101.65,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,102.71,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,102.96,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,103.67,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,103.95,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,104.13,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,104.42,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,104.97,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,106.3,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,111.5,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,111.82,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,112.32,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,113.69,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,113.77,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,115.06,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,115.47,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,117.68,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,117.92,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,118.89,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,119.86,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,122.48,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,126.61,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,131.58,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,134.29,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,136.52,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,136.78,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,139.42,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,139.74,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,149.16,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,165.14,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,181.94,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,198.36,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,207.18,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Female,258.61,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,265.96,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,296.04,G15,5,chill,-33.9,151.14,Domesticated
+Sydney,Male,296.04,G15,5,chill,-33.9,151.14,Domesticated
+Brisbane,Male,115.12,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,128.35,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,128.82,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,133.93,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,137.83,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,144,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,144.33,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,145.97,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,149.27,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,154.65,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,156.7,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,161.68,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,161.87,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,162.38,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,163.65,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,164.5,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,164.65,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,165.43,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,166.45,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,166.65,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,173.95,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,177.23,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,178.08,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,178.87,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,181.7,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,182.4,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,183.12,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,185.68,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,185.75,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,185.8,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,187.32,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,188.87,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,190.83,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,190.93,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,194.9,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,195.12,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,196.07,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,201.17,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,212.02,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,213.57,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,214.37,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,217.65,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,222.68,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,222.98,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,226.7,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,227.73,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,229.05,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,231.82,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,251.95,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,263.5,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,266.05,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,267.58,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,268.32,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,277.15,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,298.68,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,298.68,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Female,298.68,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,298.68,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,298.68,G2,4,chill,-27.41,152.9,Wild
+Brisbane,Male,298.68,G2,4,chill,-27.41,152.9,Wild
+Cape Tribulation,Male,124.92,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,127.27,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,127.38,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,127.65,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,129.92,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,130.42,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,132.35,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,136.5,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,139.13,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,139.38,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,141.15,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,142.82,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,145.05,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,145.43,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,149.23,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,150.05,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,150.22,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,150.97,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,151.62,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,153.35,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,153.58,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,153.7,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,158.5,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,158.78,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,159.05,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,159.1,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,160.5,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,161,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,161.1,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,162.1,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,163.23,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,166.15,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,167.77,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,167.88,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,169.72,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,172.53,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,175.35,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,176.13,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,176.27,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,180.88,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,182,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,185.72,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,186.65,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,187.13,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,187.78,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,188.55,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,189.9,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,191,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,196.77,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,196.8,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,198.77,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,201.88,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,204.95,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,206.32,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,213.15,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,255.72,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,272.5,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,298.68,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Female,298.68,G2,4,chill,-16.09,145.46,Wild
+Cape Tribulation,Male,298.68,G2,4,chill,-16.09,145.46,Wild
+Narrabri,Male,125.48,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,125.7,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,129.07,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,129.6,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,133.23,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,138.23,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,138.6,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,143.9,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,144.82,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,147.45,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,148.17,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,150.18,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,150.35,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,155.1,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,156.98,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,157.08,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,159.25,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,159.52,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,161.25,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,162.5,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,164.12,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,164.47,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,164.83,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,166.75,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,169.5,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,169.87,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,170.57,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,170.7,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,173.43,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,175.17,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,175.22,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,176.45,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,182.23,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,186.67,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,192.15,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,192.22,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,192.38,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,198.67,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,200.4,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,205.1,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,213.78,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,222.78,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,241.42,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,247.05,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,247.72,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,260.43,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,276.53,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,283.73,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,298.68,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,298.68,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,298.68,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,298.68,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,298.68,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,298.68,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Female,298.68,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,298.68,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,298.68,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,298.68,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,298.68,G2,4,chill,-30.33,149.78,Wild
+Narrabri,Male,298.68,G2,4,chill,-30.33,149.78,Wild
+Utchee Creek,Female,99.13,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,115.07,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,116.65,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,116.82,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,126.8,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,127.15,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,127.35,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,129.73,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,130.87,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,130.88,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,132.82,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,134.08,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,135.63,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,140.05,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,141.27,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,143.95,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,144.2,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,144.25,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,144.53,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,144.57,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,145.78,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,148.5,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,148.55,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,149.4,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,150.32,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,150.85,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,151.8,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,155.27,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,156.08,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,161.2,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,164.53,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,164.87,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,169.98,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,171.68,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,178.12,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,179.58,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,180.93,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,182.07,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,182.48,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,183.65,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,188.42,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,188.58,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,189.18,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,192.8,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,199.63,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,202.37,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,212.8,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,218.37,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,229.85,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,231.43,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,231.5,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,251.45,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,251.98,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,259.88,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,269.7,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Female,298.68,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,298.68,G2,4,chill,-17.6,145.99,Wild
+Utchee Creek,Male,298.68,G2,4,chill,-17.6,145.99,Wild
+Alice Springs,Female,58.58,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,67.7,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,70.42,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,70.93,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,72.05,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,73.35,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,75.77,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,76.15,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,78.57,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,79.03,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,80.03,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,81.05,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,81.95,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,82.98,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,86.38,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,86.48,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,87.48,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,87.8,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,89.42,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,90.22,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,91.92,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,93.6,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,94.52,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,95.32,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,95.42,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,95.87,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,96.83,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,97.58,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,98.45,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,98.67,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,99.85,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,106.25,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,106.88,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,109.5,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,110.75,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,115.42,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,118.15,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,118.22,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,118.57,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,120.17,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,129.53,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,130.28,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,131.05,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,134.03,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,137.18,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,137.73,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,141.57,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,142.53,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,148.92,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,160.28,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,174.18,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,175.85,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,184.38,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,186.2,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,194.28,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,207.37,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,211.7,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,299.6,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Female,299.6,G2,1,chill,-23.69,133.89,Wild
+Alice Springs,Male,299.6,G2,1,chill,-23.69,133.89,Wild
+Darwin,Female,58.18,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,66.05,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,69.1,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,70.55,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,74.85,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,77.35,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,78.27,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,80.9,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,81.07,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,81.28,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,81.55,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,83.22,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,83.28,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,83.85,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,84.08,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,84.58,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,85.15,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,86.13,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,86.4,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,86.67,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,88.83,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,89.52,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,89.58,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,90.1,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,90.83,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,91.53,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,92.45,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,95.27,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,95.77,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,97.18,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,97.22,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,98.48,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,98.87,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,99.6,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,103.22,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,104.38,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,106.7,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,108.65,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,110.68,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,113.93,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,114.93,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,115.1,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,116.57,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,119.55,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,122.23,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,124.5,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,127.4,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,147.1,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,149.55,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,151.98,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,159.8,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,162.28,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,178.2,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,198.52,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,212.15,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,217.67,G2,1,chill,-12.42,130.85,Wild
+Darwin,Female,299.6,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,299.6,G2,1,chill,-12.42,130.85,Wild
+Darwin,Male,299.6,G2,1,chill,-12.42,130.85,Wild
+Sydney,Female,69.25,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,73.73,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,74.98,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,75.8,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,79.08,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,81.58,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,82.1,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,82.53,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,83.88,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,83.95,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,83.97,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,84.32,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,84.75,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,85.42,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,88.45,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,88.88,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,89.12,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,89.55,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,90.07,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,91.18,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,91.42,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,92.83,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,93.8,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,94.15,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,94.2,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,95.07,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,96.67,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,97.28,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,97.37,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,99.4,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,99.75,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,99.78,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,99.88,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,100.45,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,103.1,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,103.98,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,106.37,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,108.5,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,110.08,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,114.9,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,122.07,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,127.83,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,128.5,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,128.63,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,131.93,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,132.5,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,137.8,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,138.9,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,140.1,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,157.72,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,164.5,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,173.33,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,173.37,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,173.45,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,178.63,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,189.37,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,193.98,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,226.65,G2,1,chill,-33.9,151.14,Wild
+Sydney,Female,228.17,G2,1,chill,-33.9,151.14,Wild
+Sydney,Male,299.6,G2,1,chill,-33.9,151.14,Wild
+Batemans Bay,Female,90.07,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,94.2,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,106.58,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,107.42,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,108.58,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,111.1,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,117.88,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,118.77,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,119.47,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,121.87,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,124.57,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,126.5,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,126.95,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,128.33,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,130.12,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,130.65,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,133.7,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,133.92,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,134,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,134.38,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,136.55,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,136.77,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,136.9,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,137.92,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,138.63,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,140.92,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,141.18,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,141.52,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,141.83,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,142.32,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,146.38,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,146.7,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,147.53,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,149.77,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,150.93,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,152.22,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,154.42,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,161.88,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,174.07,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,180.58,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,186.42,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,191.37,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,203.92,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,209.02,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,239.35,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,240.48,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,240.62,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Male,260.9,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,263.75,G3,3,chill,-35.7,150.19,Wild
+Batemans Bay,Female,268.33,G3,3,chill,-35.7,150.19,Wild
+Bega Valley,Male,88.67,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,89.85,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,93.3,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,99.2,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,100.38,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,101.13,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,105.45,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,109.43,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,112.47,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,113.02,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,116.83,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,119.6,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,125.7,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,131.35,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,134.78,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,138.02,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,138.97,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,139.85,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,139.95,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,140.1,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,140.2,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,145.3,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,146.58,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,151.53,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,152.48,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,153.17,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,157.55,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,157.63,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,159.97,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,164.23,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,164.95,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,172.93,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,174.03,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,174.1,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,175.58,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,175.98,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,179.67,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,179.82,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,190.9,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,192.07,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,193.03,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,196.47,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,198.08,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,198.57,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,207.73,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,221.45,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,227.05,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Male,233.48,G3,3,chill,-36.78,149.78,Wild
+Bega Valley,Female,255.18,G3,3,chill,-36.78,149.78,Wild
+Canberra,Male,32.68,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,83.32,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,84.15,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,88.38,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,89.62,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,96.37,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,99.15,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,104.33,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,105.22,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,107.58,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,109.68,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,114.1,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,116.45,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,117.52,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,117.63,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,118.18,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,119.18,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,119.32,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,119.73,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,123.17,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,123.9,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,124.5,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,127.72,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,129.77,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,130.88,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,133.55,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,134.93,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,137.2,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,139.8,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,142.05,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,142.18,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,142.22,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,143.35,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,155.25,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,159.42,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,171.05,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,174.45,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,174.9,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,175.2,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,181.82,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,189.48,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,191.8,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,206.02,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,208.32,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,231.15,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,234.7,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,241.03,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,242.65,G3,3,chill,-35.27,149.11,Wild
+Canberra,Male,243.35,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,263.13,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,264.68,G3,3,chill,-35.27,149.11,Wild
+Canberra,Female,273.85,G3,3,chill,-35.27,149.11,Wild
+Griffith,Female,85.28,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,92.22,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,94.88,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,103.1,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,104.4,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,105.2,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,110.65,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,112.93,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,113.98,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,114.95,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,119.38,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,120.13,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,120.8,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,121.25,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,121.48,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,126.33,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,129.7,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,131.77,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,133.57,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,133.88,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,134.25,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,136.72,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,143.48,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,151.37,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,151.83,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,152.43,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,153.73,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,155.92,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,157.35,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,161.03,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,161.78,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,162.87,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,168.12,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,168.28,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,168.42,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,178.55,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,179.55,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,181.68,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,182.83,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,186.5,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,191.27,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,195.7,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,196.1,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,198.92,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,203.83,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,214.25,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,217.93,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,226.9,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,231.12,G3,3,chill,-34.29,146.04,Wild
+Griffith,Female,232.97,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,247.23,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,253.63,G3,3,chill,-34.29,146.04,Wild
+Griffith,Male,258.85,G3,3,chill,-34.29,146.04,Wild
+Mareeba,Male,78.98,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,97.88,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,98.38,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,100,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,100.43,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,100.77,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,101.67,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,102.77,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,103.6,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,105.92,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,108.1,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,112.2,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,112.67,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,113.5,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,114.23,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,114.48,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,115.68,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,115.75,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,119.48,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,120.05,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,122.77,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,123.05,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,123.53,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,123.57,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,123.73,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,126.45,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,126.55,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,127.12,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,129.88,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,133.82,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,135.15,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,135.28,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,135.4,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,135.43,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,135.72,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,136.48,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,137.07,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,137.6,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,138.9,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,140.05,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,141.02,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,141.23,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,141.72,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,142.35,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,144.6,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,144.83,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,147.72,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,147.77,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,151.33,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,152.63,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,154.77,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,157.68,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,158.1,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,158.28,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,159.4,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,161.62,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,161.63,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,161.92,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,162.85,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,164.08,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,164.4,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,167.42,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,170.17,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,172.33,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,173.77,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,173.9,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,176.82,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,177.72,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,180.93,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,183.75,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,185.55,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,188.07,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,189.03,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,194.5,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,197.35,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,199.13,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,199.52,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,209.65,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,210.87,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,212.2,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,213.45,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,213.8,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,216.22,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,216.45,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,217.23,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,218.02,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,223.02,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,226.93,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,231.5,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,236.17,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,239.78,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,241.55,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,247.5,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,252.17,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,254.45,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,259.87,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Female,261.47,G3,3,chill,-17.01,145.43,Wild
+Mareeba,Male,264.08,G3,3,chill,-17.01,145.43,Wild
